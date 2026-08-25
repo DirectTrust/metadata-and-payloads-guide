@@ -1,0 +1,26 @@
+{
+  "name": "metadata-and-payloads-guide",
+  "version": "1.0.0",
+  "description": "GitHub Pages repository for the DirectTrust Framework for Metadata and Payloads via the Direct Standard(R)",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DirectTrust/metadata-and-payloads-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DirectTrust/metadata-and-payloads-guide/issues"
+  },
+  "homepage": "https://github.com/DirectTrust/metadata-and-payloads-guide#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
