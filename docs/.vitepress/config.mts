@@ -13,7 +13,8 @@ export default defineConfig({
     nav: [
       { text: 'Introduction', link: '/overview' },
       { text: 'About This Document', link: '/document-info' },
-      { text: 'Appendices', link: '/appendices' }
+      { text: 'Appendices', link: '/appendices' },
+      { text: 'DirectTrust Technical Docs Home', link: 'https://directtrust.github.io' }
     ],
 
     sidebar: [
