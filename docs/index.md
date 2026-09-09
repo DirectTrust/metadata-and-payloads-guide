@@ -10,7 +10,7 @@ title: Metadata and Payloads Guide
   </h1>
   <p class="home-hero-tagline">Part I: Framework Foundations — DS2024-07-100-2026</p>
   <div class="home-hero-actions">
-    <a class="home-hero-btn brand" href="/overview">Introduction</a>
-    <a class="home-hero-btn alt" href="/document-info">About This Document</a>
+    <a class="home-hero-btn brand" href="/metadata-and-payloads-guide/document-info">About This Document</a>
+    <a class="home-hero-btn alt" href="/metadata-and-payloads-guide/overview">Overview</a>
   </div>
 </div>
