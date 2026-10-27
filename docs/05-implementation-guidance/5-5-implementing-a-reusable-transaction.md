@@ -1,0 +1,3 @@
+# 5.5 Implementing a Reusable Transaction
+
+A Use-Case Transaction Definition (UCTXDef) applies and specializes the common Chapter 3 transaction model for a particular Shared Activity. A future Generalized Transaction Definition (GenTXDef) may be maintained in the Reusable Transaction Catalog (RTC), but **the RTC contains no GenTXDefs in this 20260828 baseline**. Implementers SHALL apply the applicable UCTXDef together with the common Framework and endpoint capability declarations. The standardized authoring outline is maintained in the MAPUC Author Kit; its editorial structure does not independently establish implementation conformance.

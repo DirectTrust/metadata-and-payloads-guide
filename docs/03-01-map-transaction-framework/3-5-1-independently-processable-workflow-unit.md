@@ -1,0 +1,5 @@
+# 3.5.1 Independently Processable Workflow Unit
+
+Each independently processable workflow unit SHALL have exactly one SubmissionSet representation and zero or one Workflow Activity Task, unless the applicable Transaction Definition requires exactly one Task. It SHALL contain the information objects required by its Transaction Definition. An IHE XDM package MAY carry 1..* SubmissionSets, each representing a separate workflow unit. The FHIR Collection Bundle representation SHALL carry the corresponding SubmissionSet List resource(s), information objects, and supporting resources as described in Appendix D. Requirements for each workflow unit apply independently.
+
+For the FHIR Metadata option, the current SubmissionSet List SHALL conform to the MAP SubmissionSet List profile identified in Section 3.7.2. This requirement applies independently of whether the workflow unit contains a Workflow Activity Task. The List indexes the submitted information objects through references to their DocumentReference resources; supporting resources do not become submitted information objects solely because they appear in the Bundle.

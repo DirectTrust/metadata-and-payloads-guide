@@ -1,0 +1,1102 @@
+[
+  {
+    "text": "About This Framework",
+    "link": "/00-about-this-framework/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "0.2 What This Framework Defines and Reuses",
+        "link": "/00-about-this-framework/0-2-what-this-framework-defines-and-reuses"
+      },
+      {
+        "text": "0.3 How to Use This Framework",
+        "link": "/00-about-this-framework/0-3-how-to-use-this-framework"
+      },
+      {
+        "text": "0.4 Framework Evolution and Development History",
+        "link": "/00-about-this-framework/0-4-framework-evolution-and-development-history"
+      }
+    ]
+  },
+  {
+    "text": "Introduction, Scope, and Architectural Principles",
+    "link": "/01-introduction-scope-and-architectural-principles/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "1.2 Scope and Applicability",
+        "link": "/01-introduction-scope-and-architectural-principles/1-2-scope-and-applicability",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "1.2.1 Information Exchange Scope",
+            "link": "/01-introduction-scope-and-architectural-principles/1-2-1-information-exchange-scope"
+          },
+          {
+            "text": "1.2.2 Exchange Technologies and Representations",
+            "link": "/01-introduction-scope-and-architectural-principles/1-2-2-exchange-technologies-and-representations"
+          },
+          {
+            "text": "1.2.3 Relationship to Existing Standards and Implementation Guides",
+            "link": "/01-introduction-scope-and-architectural-principles/1-2-3-relationship-to-existing-standards-and-implementation-guides"
+          },
+          {
+            "text": "1.2.4 What the MAP Framework Does Not Specify",
+            "link": "/01-introduction-scope-and-architectural-principles/1-2-4-what-the-map-framework-does-not-specify"
+          }
+        ]
+      },
+      {
+        "text": "1.3 MAP Architectural Model",
+        "link": "/01-introduction-scope-and-architectural-principles/1-3-map-architectural-model",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "1.3.1 Common Framework Requirements",
+            "link": "/01-introduction-scope-and-architectural-principles/1-3-1-common-framework-requirements"
+          },
+          {
+            "text": "1.3.2 Generalized Transaction Definitions and the Reusable Transaction Catalog",
+            "link": "/01-introduction-scope-and-architectural-principles/1-3-2-reusable-transaction-definitions"
+          },
+          {
+            "text": "1.3.3 Use-Case Implementation Guides and Use-Case Transaction Definitions",
+            "link": "/01-introduction-scope-and-architectural-principles/1-3-3-use-case-implementation-guides"
+          },
+          {
+            "text": "1.3.4 Relationship to the MAPUC Author Kit",
+            "link": "/01-introduction-scope-and-architectural-principles/1-3-4-relationship-to-the-mapuc-author-kit"
+          },
+          {
+            "text": "1.3.5 RTC Governance and the Reuse Feedback Cycle",
+            "link": "/01-introduction-scope-and-architectural-principles/1-3-5-reusable-transaction-catalog-governance-and-feedback"
+          }
+        ]
+      },
+      {
+        "text": "1.4 Foundational Architectural Principles",
+        "link": "/01-introduction-scope-and-architectural-principles/1-4-foundational-architectural-principles",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "1.4.1 Two-Party Information Exchange",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-1-two-party-information-exchange"
+          },
+          {
+            "text": "1.4.2 Separation of Business Intent and Technical Exchange",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-2-separation-of-business-intent-and-technical-exchange"
+          },
+          {
+            "text": "1.4.3 Human-Readable Communication and Structured Payloads",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-3-human-readable-communication-and-structured-payloads"
+          },
+          {
+            "text": "1.4.4 Progressive Interoperability and Minimally Structured Documents",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-4-progressive-interoperability-and-minimally-structured-documents"
+          },
+          {
+            "text": "1.4.5 Preservation of Information Identity, Context, and Provenance",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-5-preservation-of-information-identity-context-and-provenance"
+          },
+          {
+            "text": "1.4.6 Reuse, Specialization, and Extensibility",
+            "link": "/01-introduction-scope-and-architectural-principles/1-4-6-reuse-specialization-and-extensibility"
+          }
+        ]
+      },
+      {
+        "text": "1.5 Conformance and Requirements Organization",
+        "link": "/01-introduction-scope-and-architectural-principles/1-5-conformance-and-requirements-organization",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "1.5 Conformance and Requirements Organization",
+            "link": "/01-introduction-scope-and-architectural-principles/1-5-1-common-framework-requirements"
+          },
+          {
+            "text": "1.5.2 Transaction-Specific Requirements",
+            "link": "/01-introduction-scope-and-architectural-principles/1-5-2-transaction-specific-requirements"
+          },
+          {
+            "text": "1.5.3 Use-Case-Specific Constraints",
+            "link": "/01-introduction-scope-and-architectural-principles/1-5-3-use-case-specific-constraints"
+          },
+          {
+            "text": "1.5.4 Normative and Informative Content",
+            "link": "/01-introduction-scope-and-architectural-principles/1-5-4-normative-and-informative-content"
+          }
+        ]
+      },
+      {
+        "text": "1.6 Framework Organization and Supporting Artifacts",
+        "link": "/01-introduction-scope-and-architectural-principles/1-6-framework-organization-and-supporting-artifacts"
+      }
+    ]
+  },
+  {
+    "text": "Actors and Transactions",
+    "link": "/02-actors-and-transactions/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "2.1.1 Responsible Parties",
+        "link": "/02-actors-and-transactions/2-1-1-responsible-parties"
+      },
+      {
+        "text": "2.1.2 Organizational and Individual Capacities",
+        "link": "/02-actors-and-transactions/2-1-2-organizational-and-individual-capacities"
+      },
+      {
+        "text": "2.1.3 Business Roles and Responsibilities",
+        "link": "/02-actors-and-transactions/2-1-3-business-roles-and-responsibilities"
+      },
+      {
+        "text": "2.2 Transaction Participants and Participation Roles",
+        "link": "/02-actors-and-transactions/2-2-transaction-participants-and-participation-roles",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.2.1 Sender and Receiver Participation",
+            "link": "/02-actors-and-transactions/2-2-1-sender-and-receiver-participation"
+          },
+          {
+            "text": "2.2.2 Initiator and Responder Relationships",
+            "link": "/02-actors-and-transactions/2-2-2-initiator-and-responder-relationships"
+          },
+          {
+            "text": "2.2.3 Participation Across Organizational Boundaries",
+            "link": "/02-actors-and-transactions/2-2-3-participation-across-organizational-boundaries"
+          }
+        ]
+      },
+      {
+        "text": "2.3 Technical Actors and System Formations",
+        "link": "/02-actors-and-transactions/2-3-technical-actors-and-system-formations",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.3.1 Technical Actor Responsibilities",
+            "link": "/02-actors-and-transactions/2-3-1-technical-actor-responsibilities"
+          },
+          {
+            "text": "2.3.2 Actor Grouping",
+            "link": "/02-actors-and-transactions/2-3-2-actor-grouping"
+          },
+          {
+            "text": "2.3.3 Intermediaries and Delegated Processing",
+            "link": "/02-actors-and-transactions/2-3-3-intermediaries-and-delegated-processing"
+          },
+          {
+            "text": "2.3.4 Relationship Between Participants and Technical Actors",
+            "link": "/02-actors-and-transactions/2-3-4-relationship-between-participants-and-technical-actors"
+          }
+        ]
+      },
+      {
+        "text": "2.4 MAP Transactions and Transaction Definitions",
+        "link": "/02-actors-and-transactions/2-4-map-transactions-and-transaction-definitions",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.4.1 Transaction as a Shared Activity",
+            "link": "/02-actors-and-transactions/2-4-1-transaction-as-a-shared-activity"
+          },
+          {
+            "text": "2.4 MAP Transactions, GenTXDefs, and UCTXDefs",
+            "link": "/02-actors-and-transactions/2-4-2-transaction-identity-and-instances"
+          },
+          {
+            "text": "2.4.3 Generalized and Use-Case Transaction Definitions",
+            "link": "/02-actors-and-transactions/2-4-3-reusable-transaction-definitions"
+          },
+          {
+            "text": "2.4.4 Transaction Selection and Use-Case Constraints",
+            "link": "/02-actors-and-transactions/2-4-4-transaction-selection-and-use-case-constraints"
+          },
+          {
+            "text": "2.4.5 Relationship to Transaction Processing Requirements",
+            "link": "/02-actors-and-transactions/2-4-5-relationship-to-transaction-processing-requirements"
+          },
+          {
+            "text": "2.4.6 RTC Governance and Transaction Evolution",
+            "link": "/02-actors-and-transactions/2-4-6-rtc-governance-and-transaction-evolution"
+          }
+        ]
+      },
+      {
+        "text": "2.5 Transaction Interactions and Information Flow",
+        "link": "/02-actors-and-transactions/2-5-transaction-interactions-and-information-flow",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.5.1 Transaction Initiation and Response",
+            "link": "/02-actors-and-transactions/2-5-1-transaction-initiation-and-response"
+          },
+          {
+            "text": "2.5.2 Solicited and Unsolicited Exchanges",
+            "link": "/02-actors-and-transactions/2-5-2-solicited-and-unsolicited-exchanges"
+          },
+          {
+            "text": "2.5.3 Multi-Transaction Workflows",
+            "link": "/02-actors-and-transactions/2-5-3-multi-transaction-workflows"
+          },
+          {
+            "text": "2.5 Transaction Interactions and Information Flow",
+            "link": "/02-actors-and-transactions/2-5-4-exchange-across-intermediaries"
+          }
+        ]
+      },
+      {
+        "text": "2.6 Architectural Diagrams and Examples",
+        "link": "/02-actors-and-transactions/2-6-architectural-diagrams-and-examples",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.6.1 Basic Two-Party Transaction",
+            "link": "/02-actors-and-transactions/2-6-1-basic-two-party-transaction"
+          },
+          {
+            "text": "2.6.2 Grouped Technical Actors",
+            "link": "/02-actors-and-transactions/2-6-2-grouped-technical-actors"
+          },
+          {
+            "text": "2.6.3 Intermediated Exchange",
+            "link": "/02-actors-and-transactions/2-6-3-intermediated-exchange"
+          },
+          {
+            "text": "2.6 Architectural Diagrams and Examples",
+            "link": "/02-actors-and-transactions/2-6-4-multiple-transactions-supporting-a-business-workflow"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "MAP Transaction Framework",
+    "link": "/03-01-map-transaction-framework/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "3.1.1 Standard Transaction Definition Structure",
+        "link": "/03-01-map-transaction-framework/3-1-1-standard-transaction-definition-structure"
+      },
+      {
+        "text": "3.2 Transaction Model and Identifiers",
+        "link": "/03-01-map-transaction-framework/3-2-transaction-model-and-identifiers",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.2.1 A Transaction Is a Two-Party Shared Activity",
+            "link": "/03-01-map-transaction-framework/3-2-1-a-transaction-is-a-two-party-shared-activity"
+          },
+          {
+            "text": "3.2.2 Transaction Identity Follows the Shared Activity",
+            "link": "/03-01-map-transaction-framework/3-2-2-transaction-identity-follows-the-shared-activity"
+          },
+          {
+            "text": "3.2.3 Transaction Instance and Transport Correlation",
+            "link": "/03-01-map-transaction-framework/3-2-3-transaction-instance-and-transport-correlation"
+          },
+          {
+            "text": "3.2.4 Each Transaction Instance Establishes Its Own Perspective",
+            "link": "/03-01-map-transaction-framework/3-2-4-each-transaction-instance-establishes-its-own-perspective"
+          }
+        ]
+      },
+      {
+        "text": "3.3 Technical Actor Roles and Accountability",
+        "link": "/03-01-map-transaction-framework/3-3-technical-actor-roles-and-accountability",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.3.1 Three Independent Accountability Lenses",
+            "link": "/03-01-map-transaction-framework/3-3-1-three-independent-accountability-lenses"
+          },
+          {
+            "text": "3.3.2 Technical Actor Roles and Grouping",
+            "link": "/03-01-map-transaction-framework/3-3-2-technical-actor-roles-and-grouping"
+          },
+          {
+            "text": "3.3.3 Relationship Between Transaction Participants and Technical Actors",
+            "link": "/03-01-map-transaction-framework/3-3-3-relationship-between-transaction-participants-and-technical-actors"
+          }
+        ]
+      },
+      {
+        "text": "3.4 Transaction Processing Lifecycle and the Message to Payload Handoff",
+        "link": "/03-01-map-transaction-framework/3-4-transaction-processing-lifecycle-and-the-message-to-payload-handoff"
+      },
+      {
+        "text": "3.5 Workflow Unit and Structured Payload Architecture",
+        "link": "/03-01-map-transaction-framework/3-5-workflow-unit-and-structured-payload-architecture",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.5.1 Independently Processable Workflow Unit",
+            "link": "/03-01-map-transaction-framework/3-5-1-independently-processable-workflow-unit"
+          },
+          {
+            "text": "3.5.2 SubmissionSet and Its Relationship to the Task",
+            "link": "/03-01-map-transaction-framework/3-5-2-submissionset-and-its-relationship-to-the-task"
+          },
+          {
+            "text": "3.5.3 Workflow Activity Task",
+            "link": "/03-01-map-transaction-framework/3-5-3-workflow-activity-task"
+          },
+          {
+            "text": "3.5.4 Structured Payload Contents",
+            "link": "/03-01-map-transaction-framework/3-5-4-structured-payload-contents"
+          },
+          {
+            "text": "3.5.5 Structured Payload Completeness and Resource References",
+            "link": "/03-01-map-transaction-framework/3-5-5-structured-payload-completeness-and-resource-references"
+          }
+        ]
+      },
+      {
+        "text": "3.6 Patient Identity Context and Information Classification",
+        "link": "/03-01-map-transaction-framework/3-6-patient-identity-context-and-information-classification",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.6.1 Patient Identity and Patient Matching for Push Transactions",
+            "link": "/03-01-map-transaction-framework/3-6-1-patient-identity-and-patient-matching-for-push-transactions"
+          },
+          {
+            "text": "3.6.2 Context Instance Identifiers and Type Codes",
+            "link": "/03-01-map-transaction-framework/3-6-2-context-instance-identifiers-and-type-codes"
+          },
+          {
+            "text": "3.6.3 Information Classification and Metadata Derivation",
+            "link": "/03-01-map-transaction-framework/3-6-3-information-classification-and-metadata-derivation"
+          },
+          {
+            "text": "3.6.4 Clinical Snapshot and Document Assembly Time",
+            "link": "/03-01-map-transaction-framework/3-6-4-clinical-snapshot-and-document-assembly-time"
+          }
+        ]
+      },
+      {
+        "text": "3.7 XD Metadata Requirements and Terminology Bindings",
+        "link": "/03-01-map-transaction-framework/3-7-xd-metadata-requirements-and-terminology-bindings",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.7.1 Inventory Scope and Conformance",
+            "link": "/03-01-map-transaction-framework/3-7-1-inventory-scope-and-conformance"
+          },
+          {
+            "text": "3.7.2 SubmissionSet Metadata Inventory",
+            "link": "/03-01-map-transaction-framework/3-7-2-submissionset-metadata-inventory"
+          },
+          {
+            "text": "3.7.3 DocumentEntry Metadata Inventory",
+            "link": "/03-01-map-transaction-framework/3-7-3-documententry-metadata-inventory"
+          },
+          {
+            "text": "3.7.4 MAP Extension Slots and Membership Associations",
+            "link": "/03-01-map-transaction-framework/3-7-4-map-extension-slots-and-membership-associations"
+          },
+          {
+            "text": "3.7.5 Common Terminology Binding Rules",
+            "link": "/03-01-map-transaction-framework/3-7-5-common-terminology-binding-rules"
+          },
+          {
+            "text": "3.7.6 SubmissionSet Terminology Bindings",
+            "link": "/03-01-map-transaction-framework/3-7-6-submissionset-terminology-bindings"
+          },
+          {
+            "text": "3.7.7 DocumentEntry Terminology Bindings",
+            "link": "/03-01-map-transaction-framework/3-7-7-documententry-terminology-bindings"
+          }
+        ]
+      },
+      {
+        "text": "3.8 Message and Transport Requirements",
+        "link": "/03-01-map-transaction-framework/3-8-message-and-transport-requirements",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.8.1 MAP Message Header Metadata - Direct Transport Requirements",
+            "link": "/03-01-map-transaction-framework/3-8-1-map-message-header-metadata-direct-transport-requirements"
+          },
+          {
+            "text": "3.8.2 MAP Message Header Metadata - XD Edge Transport Requirements",
+            "link": "/03-01-map-transaction-framework/3-8-2-map-message-header-metadata-xd-edge-transport-requirements"
+          },
+          {
+            "text": "3.8.3 MAP Message Header Metadata - Additional Requirements",
+            "link": "/03-01-map-transaction-framework/3-8-3-map-message-header-metadata-additional-requirements"
+          },
+          {
+            "text": "3.8.4 Common MIME Packaging and Human Readable Content Preservation",
+            "link": "/03-01-map-transaction-framework/3-8-4-common-mime-packaging-and-human-readable-content-preservation"
+          },
+          {
+            "text": "3.8.5 Direct Message Delivery Notification and Workflow Status Updates",
+            "link": "/03-01-map-transaction-framework/3-8-5-direct-message-delivery-notification-and-workflow-status-updates"
+          }
+        ]
+      },
+      {
+        "text": "3.9 Workflow Status and Processing Anomalies",
+        "link": "/03-01-map-transaction-framework/3-9-workflow-status-and-processing-anomalies",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.9.1 Structured Payload Acceptance Reporting",
+            "link": "/03-01-map-transaction-framework/3-9-1-structured-payload-acceptance-reporting"
+          },
+          {
+            "text": "3.9.2 Structured Payload Rejection Reporting",
+            "link": "/03-01-map-transaction-framework/3-9-2-structured-payload-rejection-reporting"
+          },
+          {
+            "text": "3.9.3 Terminal Outcome Semantics",
+            "link": "/03-01-map-transaction-framework/3-9-3-terminal-outcome-semantics"
+          },
+          {
+            "text": "3.9.4 Correlation and Multiple TX8 Deliveries",
+            "link": "/03-01-map-transaction-framework/3-9-4-correlation-and-multiple-send-workflow-status-deliveries"
+          },
+          {
+            "text": "3.9.5 TX8 Terminates Workflow-Status Chaining",
+            "link": "/03-01-map-transaction-framework/3-9-5-send-workflow-status-terminates-workflow-status-chaining"
+          },
+          {
+            "text": "3.9.6 Common Processing Anomalies and Transaction-Specific Requirements",
+            "link": "/03-01-map-transaction-framework/3-9-6-common-processing-anomalies-and-transaction-specific-requirements"
+          },
+          {
+            "text": "3.9.7 Workflow Status Update Endpoint Accumulation",
+            "link": "/03-01-map-transaction-framework/3-9-7-workflow-status-update-endpoint-accumulation"
+          },
+          {
+            "text": "3.9.8 Missing Workflow Status and Follow Up",
+            "link": "/03-01-map-transaction-framework/3-9-8-missing-workflow-status-and-follow-up"
+          }
+        ]
+      },
+      {
+        "text": "3.10 Provenance Across the Transaction Lifecycle",
+        "link": "/03-01-map-transaction-framework/3-10-provenance-across-the-transaction-lifecycle"
+      },
+      {
+        "text": "3.11 Putting the Framework Together",
+        "link": "/03-01-map-transaction-framework/3-11-putting-the-framework-together"
+      }
+    ]
+  },
+  {
+    "text": "RTC — MAP Transaction Definitions",
+    "link": "/03-02-map-transaction-definitions/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "TX1: send-outpatient-visit-notification",
+        "link": "/03-02-map-transaction-definitions/tx1-send-outpatient-visit-notification"
+      },
+      {
+        "text": "TX2: send-admission-notification",
+        "link": "/03-02-map-transaction-definitions/tx2-send-admission-notification"
+      },
+      {
+        "text": "TX3: send-birth-notification",
+        "link": "/03-02-map-transaction-definitions/tx3-send-birth-notification"
+      },
+      {
+        "text": "TX4: send-discharge-notification",
+        "link": "/03-02-map-transaction-definitions/tx4-send-discharge-notification"
+      },
+      {
+        "text": "TX5: send-documents",
+        "link": "/03-02-map-transaction-definitions/tx5-send-documents"
+      },
+      {
+        "text": "tx6-query-for-documents",
+        "link": "/03-02-map-transaction-definitions/tx6-query-for-documents"
+      },
+      {
+        "text": "TX7: send-patient-update",
+        "link": "/03-02-map-transaction-definitions/tx7-send-patient-update"
+      },
+      {
+        "text": "TX8: send-workflow-status",
+        "link": "/03-02-map-transaction-definitions/tx8-send-workflow-status"
+      }
+    ]
+  },
+  {
+    "text": "Endpoint Capability and Discovery",
+    "link": "/04-endpoint-capability-and-discovery/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "4.2 MAP Endpoint CapabilityStatement Profile",
+        "link": "/04-endpoint-capability-and-discovery/4-2-map-endpoint-capabilitystatement-profile"
+      },
+      {
+        "text": "4.3 Endpoint and Organization Identification",
+        "link": "/04-endpoint-capability-and-discovery/4-3-endpoint-and-organization-identification"
+      },
+      {
+        "text": "4.4 Supported Use Cases",
+        "link": "/04-endpoint-capability-and-discovery/4-4-supported-use-cases"
+      },
+      {
+        "text": "4.5 Transaction Capabilities and Technical Actor Roles",
+        "link": "/04-endpoint-capability-and-discovery/4-5-transaction-capabilities-and-technical-actor-roles"
+      },
+      {
+        "text": "4.6 Structured Payload Metadata Representation Capabilities",
+        "link": "/04-endpoint-capability-and-discovery/4-6-structured-payload-metadata-representation-capabilities"
+      },
+      {
+        "text": "4.7 Metadata Representation Selection",
+        "link": "/04-endpoint-capability-and-discovery/4-7-metadata-representation-selection"
+      },
+      {
+        "text": "4.8 Information Object and Human-Readable Communication Capabilities",
+        "link": "/04-endpoint-capability-and-discovery/4-8-information-object-and-human-readable-communication-capabilities"
+      },
+      {
+        "text": "4.9 Direct Message Delivery and Structured Payload Workflow Status",
+        "link": "/04-endpoint-capability-and-discovery/4-9-direct-message-delivery-and-structured-payload-workflow-status"
+      },
+      {
+        "text": "4.10 TX8 Workflow Status Capability",
+        "link": "/04-endpoint-capability-and-discovery/4-10-send-workflow-status-workflow-status-capability"
+      },
+      {
+        "text": "4.11 Identifier Capabilities",
+        "link": "/04-endpoint-capability-and-discovery/4-11-identifier-capabilities"
+      },
+      {
+        "text": "4.12 Terminology Capabilities",
+        "link": "/04-endpoint-capability-and-discovery/4-12-terminology-capabilities"
+      },
+      {
+        "text": "4.13 Intended Workflow",
+        "link": "/04-endpoint-capability-and-discovery/4-13-intended-workflow"
+      },
+      {
+        "text": "4.14 Endpoint Discovery and Capability Resolution",
+        "link": "/04-endpoint-capability-and-discovery/4-14-endpoint-discovery-and-capability-resolution"
+      },
+      {
+        "text": "4.15 Testing and Operational Support",
+        "link": "/04-endpoint-capability-and-discovery/4-15-testing-and-operational-support"
+      }
+    ]
+  },
+  {
+    "text": "Implementation Guidance",
+    "link": "/05-implementation-guidance/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "5.1.1 Information Collections Have Identity, Scope, Provenance, and Lifecycle",
+        "link": "/05-implementation-guidance/5-1-1-information-collections-have-identity-scope-provenance-and-lifecycle"
+      },
+      {
+        "text": "5.1.2 Identity, Context, and Status Answer Different Questions",
+        "link": "/05-implementation-guidance/5-1-2-identity-context-and-status-answer-different-questions"
+      },
+      {
+        "text": "5.1.3 Metadata Classifies Different Aspects of the Exchange",
+        "link": "/05-implementation-guidance/5-1-3-metadata-classifies-different-aspects-of-the-exchange"
+      },
+      {
+        "text": "5.1.4 Representation Is Not the Same as Meaning",
+        "link": "/05-implementation-guidance/5-1-4-representation-is-not-the-same-as-meaning"
+      },
+      {
+        "text": "5.1.5 Responsibility and Provenance Must Survive Exchange",
+        "link": "/05-implementation-guidance/5-1-5-responsibility-and-provenance-must-survive-exchange"
+      },
+      {
+        "text": "5.2 Normative Boundary",
+        "link": "/05-implementation-guidance/5-2-normative-boundary"
+      },
+      {
+        "text": "5.3 Progressive Structuring and Narrative Interoperability",
+        "link": "/05-implementation-guidance/5-3-progressive-structuring-and-narrative-interoperability",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "5.3.1 Progressive Structuring and Source Preservation",
+            "link": "/05-implementation-guidance/5-3-1-progressive-structuring-and-source-preservation"
+          },
+          {
+            "text": "5.3.2 The Minimally Structured Document as an Interoperability Strategy",
+            "link": "/05-implementation-guidance/5-3-2-the-minimally-structured-document-as-an-interoperability-strategy"
+          },
+          {
+            "text": "5.3.3 Information Object Representation Is Not an Interoperability Maturity Ranking",
+            "link": "/05-implementation-guidance/5-3-3-information-object-representation-is-not-an-interoperability-maturity-ranki"
+          }
+        ]
+      },
+      {
+        "text": "5.4 Implementation Roadmap",
+        "link": "/05-implementation-guidance/5-4-implementation-roadmap"
+      },
+      {
+        "text": "5.5 Implementing a Reusable Transaction",
+        "link": "/05-implementation-guidance/5-5-implementing-a-reusable-transaction"
+      },
+      {
+        "text": "5.6 Endpoint Capability and Representation Selection",
+        "link": "/05-implementation-guidance/5-6-endpoint-capability-and-representation-selection",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "5.6.1 Endpoint Semantics and Capability",
+            "link": "/05-implementation-guidance/5-6-1-endpoint-semantics-and-capability"
+          },
+          {
+            "text": "5.6.2 Workflow Status Update Endpoints",
+            "link": "/05-implementation-guidance/5-6-2-workflow-status-update-endpoints"
+          },
+          {
+            "text": "5.6.3 Workflow Status Monitoring Across Organizational Boundaries",
+            "link": "/05-implementation-guidance/5-6-3-workflow-status-monitoring-across-organizations"
+          }
+        ]
+      },
+      {
+        "text": "5.7 AI-Assisted and Autonomous Implementation Considerations",
+        "link": "/05-implementation-guidance/5-7-ai-assisted-and-autonomous-implementation-considerations",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "5.7.1 AI-Assisted Content Creators and Content Consumers",
+            "link": "/05-implementation-guidance/5-7-1-ai-assisted-content-creators-and-content-consumers"
+          },
+          {
+            "text": "5.7.2 Deterministic Metadata and AI-Derived Meaning",
+            "link": "/05-implementation-guidance/5-7-2-deterministic-metadata-and-ai-derived-meaning"
+          },
+          {
+            "text": "5.7.3 Assistance, Authority, and Autonomous Processing",
+            "link": "/05-implementation-guidance/5-7-3-assistance-authority-and-autonomous-processing"
+          },
+          {
+            "text": "5.7.4 Identity, Authority, Accountability, and Provenance",
+            "link": "/05-implementation-guidance/5-7-4-identity-authority-accountability-and-provenance"
+          },
+          {
+            "text": "5.7.5 Logging, Privacy, Human Oversight, and Remediation",
+            "link": "/05-implementation-guidance/5-7-5-logging-privacy-human-oversight-and-remediation"
+          },
+          {
+            "text": "5.7.6 Example: AI-Enabled Mailroom Utility",
+            "link": "/05-implementation-guidance/5-7-6-example-ai-enabled-mailroom-utility"
+          }
+        ]
+      },
+      {
+        "text": "5.8 Conformance and Testing",
+        "link": "/05-implementation-guidance/5-8-conformance-and-testing"
+      },
+      {
+        "text": "5.9 Implementation Artifacts, Examples, and Tools",
+        "link": "/05-implementation-guidance/5-9-implementation-artifacts-examples-and-tools"
+      },
+      {
+        "text": "5.10 Implementation Checklist",
+        "link": "/05-implementation-guidance/5-10-implementation-checklist"
+      },
+      {
+        "text": "5.11 Where to Go Next",
+        "link": "/05-implementation-guidance/5-11-where-to-go-next"
+      }
+    ]
+  },
+  {
+    "text": "Terms, Definitions, and Acronyms",
+    "link": "/06-terms/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "T.2 Document and Information Terminology",
+        "link": "/06-terms/t-2-document-and-information-terminology"
+      },
+      {
+        "text": "T.3 Use Case, Transaction, Workflow, and Routing Terminology",
+        "link": "/06-terms/t-3-use-case-transaction-workflow-and-routing-terminology"
+      },
+      {
+        "text": "T.4 Supporting Guidance and Terminology Relationships",
+        "link": "/06-terms/t-4-supporting-guidance-and-terminology-relationships"
+      },
+      {
+        "text": "T.5 Acronyms and Abbreviations",
+        "link": "/06-terms/t-5-acronyms-and-abbreviations"
+      }
+    ]
+  },
+  {
+    "text": "Appendices",
+    "link": "/07-appendices/",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Appendix A — Understanding Standardized Clinical Documents",
+        "link": "/07-appendices/a-understanding-standardized-clinical-documents/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "A.2 Minimally Structured Documents and Progressive Structuring",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-2-minimally-structured-documents-and-progressive-structuring"
+          },
+          {
+            "text": "A.3 Documents as Whole Information Collections",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-3-documents-as-whole-information-collections"
+          },
+          {
+            "text": "A.4 XFRM Subset Document Derivation",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-4-xfrm-subset-document-derivation"
+          },
+          {
+            "text": "A.5 Subset Document Examples",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-5-subset-document-examples"
+          },
+          {
+            "text": "A.6 Information Collection Scope",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-6-information-collection-scope"
+          },
+          {
+            "text": "A.7 The CDA Header Should Tell the Same Story",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-7-the-cda-header-should-tell-the-same-story"
+          },
+          {
+            "text": "A.8 Clinical Time Is Not Document-Lifecycle Time",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-8-clinical-time-is-not-document-lifecycle-time"
+          },
+          {
+            "text": "A.9 Authentication Is Part of the Document Lifecycle",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-9-authentication-is-part-of-the-document-lifecycle"
+          },
+          {
+            "text": "A.10 Use Case Example",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-10-use-case-example"
+          },
+          {
+            "text": "A.11 Use Case Document Type Catalog",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-11-use-case-document-type-catalog"
+          },
+          {
+            "text": "A.12 Where to Find Implementation Rules",
+            "link": "/07-appendices/a-understanding-standardized-clinical-documents/a-12-where-to-find-implementation-rules"
+          }
+        ]
+      },
+      {
+        "text": "Appendix B — Understanding Identity, Context, and Status",
+        "link": "/07-appendices/b-understanding-identity-context-and-status/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "B.2 Identity Is Not Status",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-2-identity-is-not-status"
+          },
+          {
+            "text": "B.3 Context Instance Type Is Part of the Meaning",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-3-context-instance-type-is-part-of-the-meaning"
+          },
+          {
+            "text": "B.4 Contexts Can Coexist",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-4-contexts-can-coexist"
+          },
+          {
+            "text": "B.5 Assigning Authority Must Be Preserved",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-5-assigning-authority-must-be-preserved"
+          },
+          {
+            "text": "B.6 Codes Classify; Identifiers Identify",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-6-codes-classify-identifiers-identify"
+          },
+          {
+            "text": "B.7 Identifier Type Must Also Be Preserved",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-7-identifier-type-must-also-be-preserved"
+          },
+          {
+            "text": "B.8 Knowing an Identifier Does Not Imply Managing the Identity",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-8-knowing-an-identifier-does-not-imply-managing-the-identity"
+          },
+          {
+            "text": "B.9 Identifier Accumulation Is Part of the Handshake",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-9-identifier-accumulation-is-part-of-the-handshake"
+          },
+          {
+            "text": "B.10 Personal Health Record Example",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-10-personal-health-record-example"
+          },
+          {
+            "text": "B.11 The Identifier Handshake",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-11-the-identifier-handshake"
+          },
+          {
+            "text": "B.12 Workflow Context and FHIR Task",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-12-workflow-context-and-fhir-task"
+          },
+          {
+            "text": "B.13 Generalized Identifier Handshake for Orders and Referrals",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-13-generalized-identifier-handshake-for-orders-and-referrals"
+          },
+          {
+            "text": "B.14 Persistent Workflow Roles and Responsibilities",
+            "link": "/07-appendices/b-understanding-identity-context-and-status/b-14-persistent-workflow-roles-and-responsibilities"
+          }
+        ]
+      },
+      {
+        "text": "Appendix C — Understanding XD Classification Metadata",
+        "link": "/07-appendices/c-understanding-xd-classification-metadata/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "C.2 DocumentEntry Class Code",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-2-documententry-class-code"
+          },
+          {
+            "text": "C.3 DocumentEntry Type Code",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-3-documententry-type-code"
+          },
+          {
+            "text": "C.4 SubmissionSet Content Type Code",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-4-submissionset-content-type-code"
+          },
+          {
+            "text": "C.5 Default Alignment and Transaction-Specific Exceptions",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-5-default-alignment-and-transaction-specific-exceptions"
+          },
+          {
+            "text": "C.6 Application to Event Notifications",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-6-application-to-event-notifications"
+          },
+          {
+            "text": "C.7 Why This Matters for Progressive Interoperability",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-7-why-this-matters-for-progressive-interoperability"
+          },
+          {
+            "text": "C.8 Source Guidance",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-8-source-guidance"
+          },
+          {
+            "text": "C.9 References and Supporting Guidance",
+            "link": "/07-appendices/c-understanding-xd-classification-metadata/c-9-references-and-supporting-guidance"
+          }
+        ]
+      },
+      {
+        "text": "Appendix D — FHIR Collection Bundle Packaging",
+        "link": "/07-appendices/d-fhir-collection-bundle-packaging/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "D.2 Bundle Requirements",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-2-bundle-requirements"
+          },
+          {
+            "text": "D.3 SubmissionSet to FHIR List Mapping",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-3-submissionset-to-fhir-list-mapping"
+          },
+          {
+            "text": "D.4 DocumentEntry to FHIR DocumentReference Mapping",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-4-documententry-to-fhir-documentreference-mapping"
+          },
+          {
+            "text": "D.5 Representing the Payload Objects",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-5-representing-the-payload-objects"
+          },
+          {
+            "text": "D.6 Provenance Collection Bundles and Target Resolution",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-6-provenance-collection-bundles-and-target-resolution"
+          },
+          {
+            "text": "D.7 send-workflow-status Originating Package Identification Snapshot",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-7-send-workflow-status-originating-package-identification-snapshot"
+          },
+          {
+            "text": "D.8 FHIR XML and FHIR JSON Serialization",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-8-fhir-xml-and-fhir-json-serialization"
+          },
+          {
+            "text": "D.9 Use Case Transaction Application",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-9-use-case-transaction-application"
+          },
+          {
+            "text": "D.10 Grouped Sender Actor Processing Rules",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-10-grouped-sender-actor-processing-rules"
+          },
+          {
+            "text": "D.11 Grouped Receiver Actor Processing Expectations",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-11-grouped-receiver-actor-processing-expectations"
+          },
+          {
+            "text": "D.12 Mapping Issues Requiring Deliberate Constraint",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-12-mapping-issues-requiring-deliberate-constraint"
+          },
+          {
+            "text": "D.13 Conformance Summary",
+            "link": "/07-appendices/d-fhir-collection-bundle-packaging/d-13-conformance-summary"
+          }
+        ]
+      },
+      {
+        "text": "Appendix E — Understanding Document Lifecycle and Status",
+        "link": "/07-appendices/e-understanding-document-lifecycle-and-status/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "E.2 Where Each Status Lives",
+            "link": "/07-appendices/e-understanding-document-lifecycle-and-status/e-2-where-each-status-lives"
+          },
+          {
+            "text": "E.3 CDA and FHIR Document Status Crosswalk",
+            "link": "/07-appendices/e-understanding-document-lifecycle-and-status/e-3-cda-and-fhir-document-status-crosswalk"
+          },
+          {
+            "text": "E.3 What Is Provenance?",
+            "link": "/07-appendices/e-understanding-document-lifecycle-and-status/e-3-what-is-provenance"
+          }
+        ]
+      },
+      {
+        "text": "Appendix F — Patient Demographics and Representation Guidance",
+        "link": "/07-appendices/f-patient-demographics-and-representation-guidance/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "F.2 Representation Variation Across Standards",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-2-representation-variation-across-standards"
+          },
+          {
+            "text": "F.3 Sample Patient Demographic Representations",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-3-sample-patient-demographic-representations"
+          },
+          {
+            "text": "F.4 Patient Identifiers",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-4-patient-identifiers"
+          },
+          {
+            "text": "F.5 Patient Identifier List",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-5-patient-identifier-list"
+          },
+          {
+            "text": "F.6 Patient Name",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-6-patient-name"
+          },
+          {
+            "text": "F.7 Date of Birth",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-7-date-of-birth"
+          },
+          {
+            "text": "F.8 Administrative Gender and Sex",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-8-administrative-gender-and-sex"
+          },
+          {
+            "text": "F.9 Address",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-9-address"
+          },
+          {
+            "text": "F.10 Telecom",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-10-telecom"
+          },
+          {
+            "text": "F.11 Race and Ethnicity",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-11-race-and-ethnicity"
+          },
+          {
+            "text": "F.12 Preferred Language",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-12-preferred-language"
+          },
+          {
+            "text": "F.13 Missing Values, Precision, and Preservation of Source Meaning",
+            "link": "/07-appendices/f-patient-demographics-and-representation-guidance/f-13-missing-values-precision-and-preservation-of-source-meaning"
+          }
+        ]
+      },
+      {
+        "text": "Appendix G — Direct Transport and Edge Protocol Background",
+        "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "G.2 SMTP, MIME, S/MIME, and Certificates",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-2-smtp-mime-s-mime-and-certificates"
+          },
+          {
+            "text": "G.3 Security, Trust Agents, and Edge Systems",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-3-security-trust-agents-and-edge-systems"
+          },
+          {
+            "text": "G.4 Conceptual Message and Payload Diagrams",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-4-conceptual-message-and-payload-diagrams"
+          },
+          {
+            "text": "G.5 Edge Protocol Options",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-5-edge-protocol-options"
+          },
+          {
+            "text": "G.6 Delivery Notifications and Their Limits",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-6-delivery-notifications-and-their-limits"
+          },
+          {
+            "text": "G.7 Relationship to MAP Transaction Requirements",
+            "link": "/07-appendices/g-direct-transport-and-edge-protocol-background/g-7-relationship-to-map-transaction-requirements"
+          }
+        ]
+      },
+      {
+        "text": "Appendix H — Intermediated Exchange and System Formations",
+        "link": "/07-appendices/h-intermediated-exchange-and-system-formations/",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "H.2 Sending-Side Intermediation",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-2-sending-side-intermediation"
+          },
+          {
+            "text": "H.3 Receiving-Side Intermediation",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-3-receiving-side-intermediation"
+          },
+          {
+            "text": "H.4 Intermediation on Both Sides",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-4-intermediation-on-both-sides"
+          },
+          {
+            "text": "H.5 Forwarding, Transformation, and New Transactions",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-5-forwarding-transformation-and-new-transactions"
+          },
+          {
+            "text": "H.6 Roles, Authority, and Provenance Across Processing Boundaries",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-6-roles-authority-and-provenance-across-processing-boundaries"
+          },
+          {
+            "text": "H.7 Workflow Status Routing, Accumulation, and Deduplication",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-7-workflow-status-routing-accumulation-and-deduplication"
+          },
+          {
+            "text": "H.8 Solicited and Unsolicited Worked Formations",
+            "link": "/07-appendices/h-intermediated-exchange-and-system-formations/h-8-solicited-and-unsolicited-worked-formations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "References",
+    "link": "/08-references/"
+  },
+  {
+    "text": "Vocabulary",
+    "link": "/09-vocabulary/"
+  },
+  {
+    "text": "Examples",
+    "link": "/10-examples/"
+  }
+]

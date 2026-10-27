@@ -1,0 +1,5 @@
+# 3.9 Workflow Status and Processing Anomalies
+
+TX8 workflow-status reporting is a subsequent Shared Activity that communicates the terminal acceptance or rejection of the originating structured payload as a whole, including its Workflow Activity Task and all included information objects. This pattern does not report partial acceptance. TX8 is not a general-purpose intermediate workflow-progress protocol and is distinct from the clinical status of the patient or condition represented by the exchanged information.
+
+Acceptance or rejection implies sufficient receipt to identify the structured payload and determine its workflow status. A separate receive Provenance assertion is not required in TX8. Unpacking alone does not establish acceptance into the intended workflow. Acceptance does not establish that every information object was imported or clinically reviewed, or that downstream services were delivered. For a referral, structured payload acceptance, clinical referral acceptance, and performance of the referred services are distinct decisions. Later inability to deliver services does not retroactively reject the accepted structured payload.

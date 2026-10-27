@@ -1,0 +1,7 @@
+# 5.7.4 Identity, Authority, Accountability, and Provenance
+
+An autonomous process should remain attributable to accountable human and organizational authority. Non-human actors, the systems on which they operate, and the humans or organizations responsible for their deployment should be identifiable according to the applicable trust framework. Authority should be least-privilege, bounded to the assigned goal, time-limited where appropriate, revocable, and enforced independently of the autonomous process. A responsible human should retain the ability to suspend, override, or terminate autonomous behavior.
+
+AI processing makes accurate Provenance more important, not less. Implementations should preserve the distinction among the original Information Source, the Intermediary or Receiver Actor that processed the information, the technology component or autonomous process that performed a processing activity, and any new information derived from that activity.
+
+Use the published activity codes and bindings required by the applicable Transaction Definition. Examples include creation, signing, assembly, transformation, transmission, receipt, acceptance, and rejection; these activity labels do not authorize locally invented wire codes. Trace derived information to its source and the activity that produced it. Transport delivery, receipt of the structured payload, acceptance or rejection into the workflow, and subsequent processing remain distinct observations.

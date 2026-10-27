@@ -1,0 +1,7 @@
+# 2.6 Architectural Diagrams and Examples
+
+Architectural diagrams and traceability matrices communicate the results of the MAP Use Case Framework's analysis. The process begins with **Information Exchange Objectives**, proceeds through **Business Scenarios** and **Responsible Organizations**, identifies **Required Information Exchanges**, and then evaluates those exchanges against the RTC to select, specialize, or introduce transactions. A diagram that begins directly with available catalog transactions risks overlooking required exchanges that have not yet been specified.
+
+The **Objective-to-Transaction Matrix** traces objectives and scenarios through their required exchanges to the selected UCTXDefs, new transaction needs, or explicitly identified placeholders and gaps. **Actor Transaction Diagrams** illustrate the participating parties, their Transaction Participation Roles, the relevant Shared Activities, and the relationships among transactions in a workflow. These are complementary outputs: the matrix demonstrates coverage and traceability, while the diagrams communicate participation and interaction.
+
+The MAPUC Author Kit and its Chapter 2 Workbook provide the detailed authoring procedures and planning worksheets. The Framework defines the conceptual relationships and architectural significance of these artifacts. The examples in this section are illustrative, not normative deployment prescriptions; use-case-specific matrices and diagrams belong in the applicable UC IG.

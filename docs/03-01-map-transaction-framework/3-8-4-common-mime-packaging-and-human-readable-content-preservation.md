@@ -1,0 +1,11 @@
+# 3.8.4 Common MIME Packaging and Human Readable Content Preservation
+
+Every MAP Transaction conveyed through Direct messaging SHALL use an outer multipart/mixed message containing at least two MIME parts. MIME Part 1 SHALL be a multipart/alternative human-readable communication. It SHALL contain exactly one text/plain .txt file and MAY contain additional text/html .html alternatives presenting the same communication. The text/plain representation SHALL precede the optional alternatives within multipart/alternative.
+
+MIME Part 2 SHALL contain the structured payload defined by the applicable Transaction Definition. The Transaction Definition specifies its transaction-specific information objects and packaging representation. These common human-readable preservation requirements apply whether structured payload metadata uses the XD or FHIR Metadata option.
+
+The structured payload in MIME Part 2 SHALL contain copies of every human-readable file included in MIME Part 1: the required .txt file and every optional .html alternative supplied there. Each packaged copy SHALL have the same file content as its corresponding outer representation. A separately generated summary, a link to the outer MIME part, or a machine-processable source object does not satisfy this requirement. The package metadata SHALL identify the included human-readable objects using the selected metadata representation.
+
+Some Content Consumers retain or pass onward only the structured payload and discard the other outer MIME parts. Including the same human-readable files inside the package preserves access to the communication when this occurs. Human readability SHALL therefore be preserved both in the outer message and within the structured payload; the optional status of an HTML alternative does not make its packaged copy optional once that alternative is supplied in MIME Part 1.
+
+The grouped Sender Actor SHALL include and validate the required human-readable copies in the structured payload and construct the outer MIME parts with the same file content. These responsibilities MAY be divided between Content Creator and Message Sender according to the implementation. The applicable Transaction Definition specifies the human-readable content coverage and transaction-specific information objects.

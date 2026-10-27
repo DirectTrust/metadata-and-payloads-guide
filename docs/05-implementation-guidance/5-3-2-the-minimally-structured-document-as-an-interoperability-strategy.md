@@ -1,0 +1,9 @@
+# 5.3.2 The Minimally Structured Document as an Interoperability Strategy
+
+The Minimally Structured Document is not merely a fallback for systems that cannot produce highly structured content. It is a deliberate interoperability strategy: preserve the native human-readable information, add the minimum dependable structure needed to identify and exchange it safely, and progressively enrich the computable representation when doing so produces demonstrated value.
+
+This approach can lower the barrier to participation for smaller EHRs and other systems with limited development resources. A system does not need to reproduce the structured-data capabilities of the largest EHR platforms before it can participate meaningfully in exchange. If it can create or preserve useful information, associate the deterministic metadata required by the transaction, package it correctly, transmit it securely, and preserve provenance, the receiving environment can apply additional processing capabilities according to its own maturity.
+
+Structured content SHALL preserve the contextual integrity of its source form. A CDA representing a patient-authored Birth Plan, for example, must not add clinical facts that the patient did not include in the source. Clinical information added by another party requires distinct attribution and an appropriate information object; it must not be attributed to the original author. Required exchange metadata remains explicit without expanding the authored clinical content.
+
+Clinical snapshot time and assembly time are different. When an existing clinical document is assembled into a shareable form later, preserve the information known at its clinical effective time. Subsequent observations must not silently enter the earlier snapshot. Record assembly separately as required by Chapter 3 and the applicable Transaction Definition.

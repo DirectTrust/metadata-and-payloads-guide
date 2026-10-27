@@ -1,0 +1,3 @@
+# 3.7 XD Metadata Requirements and Terminology Bindings
+
+MAP uses standard XD/XDS SubmissionSet metadata and intentionally adds package-level information where an authorized receiver or intermediary needs it to identify, correlate, route, patient-match, or safely process a workflow unit without first opening an arbitrary clinical information object. When all DocumentEntries in a SubmissionSet pertain to a single patient, MAP requires package-level Patient Info as defined below. Every MAP-added SubmissionSet Slot used by a Transaction SHALL be explicitly called out in that Transaction Definition.

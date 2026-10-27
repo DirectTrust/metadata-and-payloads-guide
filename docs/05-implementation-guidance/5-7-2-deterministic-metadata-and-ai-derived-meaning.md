@@ -1,0 +1,5 @@
+# 5.7.2 Deterministic Metadata and AI-Derived Meaning
+
+Information that controls or correlates a transaction SHALL be represented explicitly when required by the specification. This includes transaction identity, patient identity, Routing Target, applicable report endpoints, Context identifiers, SubmissionSet business identity and purpose, required Provenance, authorization controls, and Workflow Activity Task when required or elected. When a Task is present, its identifier and code SHALL agree with the designated SubmissionSet identifier and purpose respectively, including the purpose code system, as specified in Chapter 3. AI inference cannot replace required deterministic values.
+
+AI may be used to derive additional meaning from narrative information-object content. An implementation may, for example, identify a preferred pediatrician in a Birth Plan, classify the clinical relevance of an incoming narrative, or recognize that information is pertinent to a maternal-health workflow. Such derived meaning must not be represented as though it were an original structured assertion made by the Information Source.

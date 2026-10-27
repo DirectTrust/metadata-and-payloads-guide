@@ -1,0 +1,15 @@
+# 3.6.1 Patient Identity and Patient Matching for Push Transactions
+
+For a MAP push transaction, patientId and sourcePatientId represent different patient-identifier perspectives. patientId SHALL be populated only when the Information Source knows the patient identifier appropriate to the Information Recipient or a mutually agreed exchange patient-identifier domain. The Information Source SHALL NOT copy its own local patient identifier into patientId merely because no recipient-known identifier is available. The Information Source local identifier belongs in DocumentEntry.sourcePatientId.
+
+When all DocumentEntries in a SubmissionSet pertain to one patient, MAP SubmissionSet Patient Info SHALL be present. The extension SHALL use the same patient demographic representation and semantics defined for DocumentEntry.sourcePatientInfo. Patient Info SHALL be provided even when patientId is known, because it supplies an independent matching/checking fallback that can improve confidence in the Content Consumer patient match.
+
+A patient identifier learned or resolved during transaction packaging MAY be represented in SubmissionSet.patientId and applicable DocumentEntry.patientId when it is known to be appropriate to the Information Recipient or agreed exchange domain. Packaging software SHALL NOT alter the underlying source ADT, CDA, or other clinical source object solely to inject that recipient-known patient identifier.
+
+Example — a use-case transaction followed by TX8
+
+a use-case transaction: Organization A sends an Outpatient Visit Notification to Organization B. For a use-case transaction, A is the Information Source and B is the Information Recipient. SubmissionSet.sourceId identifies A. DocumentEntry.sourcePatientId carries A’s locally known patient identifier. SubmissionSet.patientId and applicable DocumentEntry.patientId are populated only if A knows the patient identifier appropriate to B or the mutually agreed exchange domain. SubmissionSet Patient Info is present regardless, providing the demographic information B can use to match or confirm the patient.
+
+TX8: Organization B subsequently sends Workflow Status back to Organization A. TX8 is a new Transaction Instance, so B is now the Information Source and A is the Information Recipient. SubmissionSet.sourceId therefore identifies B. If B successfully matched the patient, B’s locally known patient identifier may be represented as the sourcePatientId of TX8 information. patientId is populated only if B knows the identifier appropriate to A or the mutually agreed exchange domain. SubmissionSet Patient Info is again present. TX8 correlation to a use-case transaction preserves the relationship between the transactions without preserving the a use-case transaction actor-role assignments.
+
+If B cannot match the patient, B SHALL NOT manufacture a local sourcePatientId. A failed TX8 may still carry the SubmissionSet Patient Info associated with the attempted match and report the applicable structured payload rejection outcome.

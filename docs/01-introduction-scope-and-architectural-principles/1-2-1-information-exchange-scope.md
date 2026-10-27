@@ -1,0 +1,7 @@
+# 1.2.1 Information Exchange Scope
+
+MAP models the exchanges necessary to support a defined business workflow while distinguishing the exchanges specified by MAP from activities performed under other methods or specifications. The boundaries of a use case may be wider than the set of transactions for which its Implementation Guide establishes conformance requirements. This distinction permits an intelligible end-to-end workflow model without claiming authority over every component of that workflow.
+
+**Placeholder transactions** MAY be included in use-case models to represent exchanges conducted through a different information exchange methodology, work under concurrent specification development, or anticipated future transactions. A placeholder identifies a dependency, expected interaction, or boundary; it does not by itself establish a complete MAP transaction specification or conformance obligation. Models SHALL identify placeholders clearly and distinguish them from specified UCTXDefs. A placeholder may eventually be replaced by a UCTXDef, a reference to another published specification, or a more detailed description of the external activity.
+
+The use-case scope statement should distinguish in-scope MAP exchanges, externally specified exchanges, placeholders, and business activities that are not information exchanges. A placeholder is not automatically a candidate for the RTC: some are deliberately external to MAP. Section 2.5 addresses how these interactions appear within a multi-transaction workflow.

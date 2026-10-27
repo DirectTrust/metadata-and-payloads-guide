@@ -1,0 +1,7 @@
+# 3.6.2 Context Instance Identifiers and Type Codes
+
+ContextInstance TypeCodes have an Extensible binding to the DirectTrust Context TypeCode Value Set (DTContextTypeCodeVS), http://objects.directtrust.org/standards/terminology/ValueSet/DTContextTypeCodeVS, as specified in the SubmissionSet terminology binding table in Section 3.7.6. This binding applies to Context Instance type declarations in the Workflow Activity Task and corresponding XD or FHIR metadata. The type code identifies the kind of established Context Instance; the associated identifier identifies the particular instance.
+
+The value set includes DirectTrust Context type codes and the IHE-defined accession, referral, order, DICOM Study Instance UID, and encounter identifier type URNs. In FHIR, the IHE types SHALL use urn:ietf:rfc:3986 as Coding.system and the complete IHE URN as Coding.code. DirectTrust types SHALL use the DirectTrust Context TypeCode CodeSystem canonical URI. The assigning authority or identifier namespace SHALL remain distinct from the type coding system. In XD CXi encoding, the complete type URN is carried in CXi.5.
+
+IHE definitions are provided in ITI TF Volume 3, Table 4.2.3.1.7-2, with FHIR identifier mapping in ITI TF Volume 2, Appendix Z, Section Z.9.1.2. The IHE Study Instance UID type is urn:ihe:iti:xds:2016:studyInstanceUID; the encounter identifier type is urn:ihe:iti:xds:2015:encounterId.
