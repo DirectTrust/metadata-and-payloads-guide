@@ -26,9 +26,9 @@ trap 'rm -rf "$WORK"; git -C "$ROOT" worktree prune' EXIT
 mkdir -p "$OUT"
 OUT="$(cd "$OUT" && pwd)"
 
-# The History page lists every version, so generate it once and put the same copy in every
+# The Version History page lists every version, so generate it once and put the same copy in every
 # build -- each rebuild of an archived version then also shows releases made after it.
-MAIN_REF="$MAIN_REF" DEVELOP_REF="$DEVELOP_REF" node "$ROOT/scripts/generate-history.mjs" "$WORK/history.md"
+MAIN_REF="$MAIN_REF" DEVELOP_REF="$DEVELOP_REF" node "$ROOT/scripts/generate-history.mjs" "$WORK/version-history.md"
 
 # build_ref <name> <git-ref> <channel> <url-path> <dest-dir>
 build_ref() {
@@ -37,18 +37,18 @@ build_ref() {
 
   echo "::group::Build $name ($ref) -> $url_path"
   git -C "$ROOT" worktree add --detach "$dir" "$ref" >/dev/null
-  cp "$WORK/history.md" "$dir/docs/history.md"
+  cp "$WORK/version-history.md" "$dir/docs/version-history.md"
 
-  # Refs from before the History page existed have no sidebar entry for it. Wrap their
-  # config (without touching the ref itself) so History is appended below the last group.
-  if ! grep -q "history" "$dir/docs/.vitepress/config.mts"; then
+  # Refs from before the Version History page existed have no sidebar entry for it. Wrap their
+  # config (without touching the ref itself) so Version History is appended below the last group.
+  if ! grep -q "version-history" "$dir/docs/.vitepress/config.mts"; then
     mv "$dir/docs/.vitepress/config.mts" "$dir/docs/.vitepress/config.base.mts"
     cat > "$dir/docs/.vitepress/config.mts" <<'EOF_SHIM'
 import base from './config.base.mts'
 const tc: any = base.themeConfig ?? {}
 export default {
   ...base,
-  themeConfig: { ...tc, sidebar: [...(tc.sidebar ?? []), { text: 'History', link: '/history' }] }
+  themeConfig: { ...tc, sidebar: [...(tc.sidebar ?? []), { text: 'Version History', link: '/version-history' }] }
 }
 EOF_SHIM
   fi

@@ -1,4 +1,4 @@
-// Generates docs/history.md: the "History" page listing the current, in-development and
+// Generates docs/version-history.md: the "Version History" page listing the current, in-development and
 // every released version of the guide. Run on every build (scripts/build-site.sh for the
 // published site, the predocs:* npm hooks locally), so it is never edited by hand and is
 // gitignored.
@@ -10,7 +10,7 @@
 //   - "Other working versions" is reserved for tagged working versions that follow a
 //     naming convention we do not have yet, so it is empty for now.
 //
-// Usage: node scripts/generate-history.mjs [out-file]   (default docs/history.md)
+// Usage: node scripts/generate-history.mjs [out-file]   (default docs/version-history.md)
 import { execFileSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url'
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const SITE_BASE = '/metadata-and-payloads-guide'
-const out = path.resolve(process.argv[2] ?? path.join(REPO_ROOT, 'docs', 'history.md'))
+const out = path.resolve(process.argv[2] ?? path.join(REPO_ROOT, 'docs', 'version-history.md'))
 
 const run = (cmd, args) =>
   execFileSync(cmd, args, { cwd: REPO_ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
@@ -29,7 +29,7 @@ try {
   const pages = run('gh', ['api', 'repos/{owner}/{repo}/releases', '--paginate', '--slurp'])
   for (const r of JSON.parse(pages).flat()) if (!r.draft) releases.set(r.tag_name, r)
 } catch (e) {
-  // In CI a missing release list would silently publish a History page without
+  // In CI a missing release list would silently publish a Version History page without
   // descriptions, so fail there; locally (no gh, offline) just warn and carry on.
   if (process.env.CI) throw e
   console.warn(`generate-history: could not read GitHub releases (${e.message.split('\n')[0]}); using tag data only`)
@@ -94,10 +94,10 @@ const row = (t) =>
   `| ${link(`${SITE_BASE}/${encodeURIComponent(t.name)}/`, `Version ${t.name}`)} | ${day(t.date)} | ${cell(t.description)} |`
 
 const page = `---
-title: History
+title: Version History
 ---
 
-# History
+# Version History
 
 ## Current and upcoming
 

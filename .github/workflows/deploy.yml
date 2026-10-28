@@ -39,7 +39,7 @@ jobs:
 
       - name: Build all versions
         env:
-          GH_TOKEN: ${{ github.token }} # the History page reads release descriptions
+          GH_TOKEN: ${{ github.token }} # the Version History page reads release descriptions
         run: scripts/build-site.sh site
 
       - name: Setup Pages

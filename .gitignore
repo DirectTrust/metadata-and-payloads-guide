@@ -20,4 +20,4 @@ scratchpad/
 .DS_Store
 
 # Generated at build time by scripts/generate-history.mjs
-docs/history.md
+docs/version-history.md
