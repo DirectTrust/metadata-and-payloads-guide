@@ -1,8 +1,15 @@
 name: Deploy VitePress site to Pages
 
+# One Pages site, several builds (see scripts/build-site.sh):
+#   /                 main      -- current published version
+#   /develop/         develop   -- DRAFT preview of the next version
+#   /<tag>/           every git tag -- archived versions
+# Any change to main or develop, or a published release, rebuilds and redeploys all of it.
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
@@ -21,19 +28,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # needed for lastUpdated in VitePress
+          fetch-depth: 0 # all branches + tags: needed to build them and for lastUpdated in VitePress
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run docs:build
+      - name: Build all versions
+        run: scripts/build-site.sh site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -41,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: site
 
   deploy:
     environment:
