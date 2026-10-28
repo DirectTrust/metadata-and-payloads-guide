@@ -12,7 +12,7 @@ const { theme } = useData()
     <strong>DRAFT</strong>
     <span>
       Working draft of an upcoming version. Not the published standard.
-      <a v-if="theme.publishedUrl" :href="theme.publishedUrl">View the current published version</a>
+      <a v-if="theme.publishedUrl" class="vp-raw" :href="theme.publishedUrl">View the current published version</a>
     </span>
   </div>
 </template>
