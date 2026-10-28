@@ -38,6 +38,20 @@ build_ref() {
   echo "::group::Build $name ($ref) -> $url_path"
   git -C "$ROOT" worktree add --detach "$dir" "$ref" >/dev/null
   cp "$WORK/history.md" "$dir/docs/history.md"
+
+  # Refs from before the History page existed have no sidebar entry for it. Wrap their
+  # config (without touching the ref itself) so History is appended below the last group.
+  if ! grep -q "history" "$dir/docs/.vitepress/config.mts"; then
+    mv "$dir/docs/.vitepress/config.mts" "$dir/docs/.vitepress/config.base.mts"
+    cat > "$dir/docs/.vitepress/config.mts" <<'EOF_SHIM'
+import base from './config.base.mts'
+const tc: any = base.themeConfig ?? {}
+export default {
+  ...base,
+  themeConfig: { ...tc, sidebar: [...(tc.sidebar ?? []), { text: 'History', link: '/history' }] }
+}
+EOF_SHIM
+  fi
   (
     cd "$dir"
     npm ci --no-audit --no-fund
