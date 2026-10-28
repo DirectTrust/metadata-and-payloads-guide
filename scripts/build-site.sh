@@ -28,7 +28,7 @@ OUT="$(cd "$OUT" && pwd)"
 
 # The History page lists every version, so generate it once and put the same copy in every
 # build -- each rebuild of an archived version then also shows releases made after it.
-node "$ROOT/scripts/generate-history.mjs" "$WORK/history.md"
+MAIN_REF="$MAIN_REF" node "$ROOT/scripts/generate-history.mjs" "$WORK/history.md"
 
 # build_ref <name> <git-ref> <channel> <url-path> <dest-dir>
 build_ref() {

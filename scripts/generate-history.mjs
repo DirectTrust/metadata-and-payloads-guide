@@ -53,20 +53,33 @@ const tags = run('git', ['for-each-ref', '--format=%(refname:short)%09%(creatord
 const link = (href, text) => `<a class="vp-raw" href="${href}">${text}</a>`
 const day = (d) => d.toISOString().slice(0, 10)
 
-// Release notes are free-form Markdown. Demote headings to bold so they do not turn into
-// page headings/outline entries of their own.
-const demote = (md) => md.replace(/^#{1,6}\s+(.+)$/gm, '**$1**')
+// "Latest" is whatever main currently is, so name the release it corresponds to: the newest
+// tag reachable from main (the tag on main's head commit when main has not moved past it).
+const MAIN_REF = process.env.MAIN_REF ?? 'origin/main'
+let latest = null
+try {
+  const merged = new Set(run('git', ['tag', '--merged', MAIN_REF]).split('\n').filter(Boolean))
+  latest = tags.find((t) => merged.has(t.name))?.name ?? null // tags are sorted newest first
+} catch (e) {
+  console.warn(`generate-history: could not map ${MAIN_REF} to a tag (${e.message.split('\n')[0]})`)
+}
 
-const entry = (t) => `### Version ${t.name}
+// Release notes are free-form Markdown but live in a single table cell, so flatten them to
+// one line: headings become bold, line breaks become <br>, and "|" is escaped. v-pre stops
+// Vue from interpreting any {{ }} in the text.
+const cell = (md) => {
+  const text = md
+    .replace(/^#{1,6}\s+(.+)$/gm, '**$1**')
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .join('<br>')
+    .replace(/\|/g, '\\|')
+  return text ? `<span v-pre>${text}</span>` : '_No description provided._'
+}
 
-Released ${day(t.date)} · ${link(`${SITE_BASE}/${encodeURIComponent(t.name)}/`, 'View this version')}
-
-<div v-pre>
-
-${demote(t.description) || '_No description provided._'}
-
-</div>
-`
+const row = (t) =>
+  `| ${link(`${SITE_BASE}/${encodeURIComponent(t.name)}/`, `Version ${t.name}`)} | ${day(t.date)} | ${cell(t.description)} |`
 
 const page = `---
 title: History
@@ -74,22 +87,20 @@ title: History
 
 # History
 
-Versions of the Framework for Metadata and Payloads via the Direct Standard®. This page is generated automatically each time the site is built, and appears in every version of the guide.
-
 ## Current and upcoming
 
 | Version | Description |
 |---|---|
-| ${link(`${SITE_BASE}/`, '**Latest**')} | Latest released version |
+| ${link(`${SITE_BASE}/`, latest ? `**Latest (${latest})**` : '**Latest**')} | Latest released version${latest ? ` (${latest})` : ''} |
 | ${link(`${SITE_BASE}/develop/`, '**Develop**')} | Next version in development |
 
 ## Released versions
 
-${tags.length ? tags.map(entry).join('\n') : '_No tagged releases yet._\n'}
+${tags.length ? `| Version | Date | Change |\n|---|---|---|\n${tags.map(row).join('\n')}\n` : '_No tagged releases yet._\n'}
 ## Other working versions
 
 None at this time.
 `
 
 fs.writeFileSync(out, page)
-console.log(`generate-history: wrote ${path.relative(REPO_ROOT, out)} (${tags.length} released version${tags.length === 1 ? '' : 's'})`)
+console.log(`generate-history: wrote ${path.relative(REPO_ROOT, out)} (${tags.length} released version${tags.length === 1 ? '' : 's'}; latest = ${latest ?? 'unknown'})`)
