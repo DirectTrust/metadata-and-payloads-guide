@@ -4,6 +4,8 @@
   "description": "GitHub Pages repository for the DirectTrust Framework for Metadata and Payloads via the Direct Standard(R)",
   "main": "index.js",
   "scripts": {
+    "predocs:dev": "node scripts/generate-history.mjs",
+    "predocs:build": "node scripts/generate-history.mjs",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

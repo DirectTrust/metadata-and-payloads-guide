@@ -38,6 +38,8 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Build all versions
+        env:
+          GH_TOKEN: ${{ github.token }} # the History page reads release descriptions
         run: scripts/build-site.sh site
 
       - name: Setup Pages

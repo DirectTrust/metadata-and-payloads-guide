@@ -26,6 +26,10 @@ trap 'rm -rf "$WORK"; git -C "$ROOT" worktree prune' EXIT
 mkdir -p "$OUT"
 OUT="$(cd "$OUT" && pwd)"
 
+# The History page lists every version, so generate it once and put the same copy in every
+# build -- each rebuild of an archived version then also shows releases made after it.
+node "$ROOT/scripts/generate-history.mjs" "$WORK/history.md"
+
 # build_ref <name> <git-ref> <channel> <url-path> <dest-dir>
 build_ref() {
   local name="$1" ref="$2" channel="$3" url_path="$4" dest="$5"
@@ -33,6 +37,7 @@ build_ref() {
 
   echo "::group::Build $name ($ref) -> $url_path"
   git -C "$ROOT" worktree add --detach "$dir" "$ref" >/dev/null
+  cp "$WORK/history.md" "$dir/docs/history.md"
   (
     cd "$dir"
     npm ci --no-audit --no-fund
