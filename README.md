@@ -56,7 +56,17 @@ metadata-and-payloads-guide/
 
 ## How it gets hosted
 
-GitHub Pages is configured to deploy from GitHub Actions (repo **Settings → Pages → Build and deployment → Source → GitHub Actions**), not from a branch. `.github/workflows/deploy.yml` runs on every push to `main`: checks out the repo, installs dependencies, runs `docs:build`, and hands the `dist/` folder to GitHub's official Pages deploy action. No separate server, no Jekyll — the workflow *is* the deploy pipeline. A push to `main` is live at `https://directtrust.github.io/metadata-and-payloads-guide/` about a minute later. You can watch progress under the repo's **Actions** tab.
+GitHub Pages is configured to deploy from GitHub Actions (repo **Settings → Pages → Build and deployment → Source → GitHub Actions**), not from a branch. `.github/workflows/deploy.yml` runs on every push to `main` or `develop` (and when a release is published): it runs `scripts/build-site.sh`, which builds every version into one site, and hands that folder to GitHub's official Pages deploy action. No separate server, no Jekyll — the workflow *is* the deploy pipeline. A push to `main` is live at `https://directtrust.github.io/metadata-and-payloads-guide/` about a minute later. You can watch progress under the repo's **Actions** tab.
+
+The one Pages site serves several versions side by side:
+
+| URL | Source | Notes |
+|---|---|---|
+| `/metadata-and-payloads-guide/` | `main` | Current published version |
+| `/metadata-and-payloads-guide/develop/` | `develop` | Preview of the next version. The build adds a **DRAFT banner** and `noindex` automatically (via `DOCS_CHANNEL=draft`), so authors never mark pages as drafts themselves |
+| `/metadata-and-payloads-guide/<tag>/` | every git tag | Archived versions. **Every tag is published** — tag a commit only when it should be live. Delete the tag to unpublish it |
+
+Search is per version: each build ships its own search index, so searching one version never returns results from another. To release a new version, merge `develop` into `main`, then tag the previous release if it isn't already (it then stays available at its tag URL).
 
 ## Workflow for writing or editing content
 
