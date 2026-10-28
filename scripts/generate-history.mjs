@@ -57,11 +57,23 @@ const day = (d) => d.toISOString().slice(0, 10)
 // tag reachable from main (the tag on main's head commit when main has not moved past it).
 const MAIN_REF = process.env.MAIN_REF ?? 'origin/main'
 let latest = null
+let latestDate = ''
 try {
   const merged = new Set(run('git', ['tag', '--merged', MAIN_REF]).split('\n').filter(Boolean))
-  latest = tags.find((t) => merged.has(t.name))?.name ?? null // tags are sorted newest first
+  const t = tags.find((t) => merged.has(t.name)) // tags are sorted newest first
+  latest = t?.name ?? null
+  latestDate = t ? day(t.date) : ''
 } catch (e) {
   console.warn(`generate-history: could not map ${MAIN_REF} to a tag (${e.message.split('\n')[0]})`)
+}
+
+// Develop has no release date, so show when its branch was last modified.
+const DEVELOP_REF = process.env.DEVELOP_REF ?? 'origin/develop'
+let developDate = ''
+try {
+  developDate = day(new Date(run('git', ['log', '-1', '--format=%cI', DEVELOP_REF]).trim()))
+} catch (e) {
+  console.warn(`generate-history: could not read the last commit date of ${DEVELOP_REF} (${e.message.split('\n')[0]})`)
 }
 
 // Release notes are free-form Markdown but live in a single table cell, so flatten them to
@@ -89,10 +101,10 @@ title: History
 
 ## Current and upcoming
 
-| Version | Description |
-|---|---|
-| ${link(`${SITE_BASE}/`, latest ? `**Latest (${latest})**` : '**Latest**')} | Latest released version${latest ? ` (${latest})` : ''} |
-| ${link(`${SITE_BASE}/develop/`, '**Develop**')} | Next version in development |
+| Version | Date | Description |
+|---|---|---|
+| ${link(`${SITE_BASE}/`, latest ? `**Latest (${latest})**` : '**Latest**')} | ${latestDate} | Latest released version${latest ? ` (${latest})` : ''} |
+| ${link(`${SITE_BASE}/develop/`, '**Develop**')} | ${developDate} | Next version in development |
 
 ## Released versions
 
