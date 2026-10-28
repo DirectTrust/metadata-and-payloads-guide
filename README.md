@@ -66,6 +66,8 @@ The one Pages site serves several versions side by side:
 | `/metadata-and-payloads-guide/develop/` | `develop` | Preview of the next version. The build adds a **DRAFT banner** and `noindex` automatically (via `DOCS_CHANNEL=draft`), so authors never mark pages as drafts themselves |
 | `/metadata-and-payloads-guide/<tag>/` | every git tag | Archived versions. **Every tag is published** — tag a commit only when it should be live. Delete the tag to unpublish it |
 
+The **History** page (last item in the sidebar) is generated on every build by `scripts/generate-history.mjs` and is not edited by hand: it always lists *Latest* and *Develop*, then one *Version* entry per git tag, newest first, with the description taken from that tag's GitHub release notes. So write a good release description when you publish a release. An *Other working versions* section is reserved (empty for now) for a future tag-naming convention for unofficial versions.
+
 Search is per version: each build ships its own search index, so searching one version never returns results from another. To release a new version, merge `develop` into `main`, then tag the previous release if it isn't already (it then stays available at its tag URL).
 
 ## Workflow for writing or editing content
