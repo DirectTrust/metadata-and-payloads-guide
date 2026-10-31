@@ -39,10 +39,10 @@ Although the Framework helps authors understand how to apply the specification m
 
 The October 16, 2026 version is a development baseline reflecting refinements made after the February 26, 2026 publication. The February publication remains the historical published source. The October baseline is subject to review, reconciliation, and the applicable approval process before it can be treated as a formally approved revision. Authors evaluating it for new UC IG work should distinguish its development status from that of published specifications.
 
-## 0.4.6 The RTC and the GenTXDef–UCTXDef Feedback Cycle
+## 0.4.6 Growing the Reusable Transaction Catalog
 
-The RTC provides a governed collection of transaction patterns intended for reuse across use cases. GenTXDefs retain common behavior while identifying permitted variation, including vocabulary bindings and cardinalities. A UC IG selects and constrains applicable patterns in its UCTXDefs, or defines new UCTXDefs when the RTC does not contain a suitable pattern.
+The Reusable Transaction Catalog (RTC) contains Generalized Transaction Definitions (GenTXDefs) approved for reuse across multiple use cases. When developing a Use Case Implementation Guide (UC IG), authors can select an existing GenTXDef and specialize it into a Use-Case Transaction Definition (UCTXDef) by specifying the vocabulary, cardinalities, and other requirements needed for their particular use case. If no suitable GenTXDef exists, authors can develop a new UCTXDef.
 
-A new UCTXDef may subsequently be evaluated, generalized, and approved for inclusion in the RTC through DirectTrust’s MAP Framework Consensus Body. This feedback cycle enables lessons from use-case implementations to improve reusable specifications without treating every use-case-specific transaction as a catalog entry.
+New UCTXDefs may introduce transaction patterns that could benefit other use cases. These patterns can be proposed to DirectTrust’s MAP Framework Consensus Body for review and generalization. Through this process, requirements specific to the originating use case are separated from the common transaction behavior, and appropriate points of variation are identified. Once approved, the resulting GenTXDef is added to the RTC and becomes available for reuse in future UC IGs.
 
-The feedback cycle does not change the starting point for use-case analysis: authors first establish objectives, business scenarios, responsible organizations, and required exchanges. Objective-to-Transaction Matrices and Actor Transaction Diagrams document and communicate the resulting architecture, but they do not substitute for that analysis.
+This approach allows the RTC to grow through practical experience while maintaining a consistent set of governed, reusable transaction definitions.
