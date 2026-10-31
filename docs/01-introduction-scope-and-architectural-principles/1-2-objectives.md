@@ -12,6 +12,6 @@ O4 — Improve information usability and processing consistency. Support appropr
 
 O5 — Support progressive interoperability. Allow practical, purposeful improvements in information structure and workflow integration while building on existing infrastructure and standards.
 
-O6 — Support clear, testable implementation expectations. Organize common, transaction-specific, and use-case-specific requirements so derivative UC IGs can state implementer obligations unambiguously.
+O6 — Support clear, testable implementation expectations. Organize common, transaction-specific, and use-case-specific requirements so derivative UC IGs can state implementer obligations unambiguously. Establish consistent authoring conventions that support repeatable, traceable UC IG development by human authors and AI-assisted authoring tools.
 
 These are objectives of the MAP Framework as a whole. Each derivative UC IG separately defines the Information Exchange Objectives associated with its own business problem.
