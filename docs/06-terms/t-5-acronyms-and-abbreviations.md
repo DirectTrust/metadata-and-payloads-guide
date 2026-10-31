@@ -23,6 +23,6 @@ The following initial register covers the core terms defined in Chapter T. A ful
 | MDN | Message Disposition Notification |
 | MIME | Multipurpose Internet Mail Extensions |
 | RTC | Reusable Transaction Catalog |
-| UC IG | Use-Case Implementation Guide |
-| UCTXDef | Use-Case Transaction Definition |
+| UC IG | Use Case Implementation Guide |
+| UCTXDef | Use Case Transaction Definition |
 | XDM | Cross-Enterprise Document Media Interchange |

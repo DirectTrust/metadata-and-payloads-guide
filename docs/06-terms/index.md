@@ -1,6 +1,6 @@
 # Chapter T — Terms, Definitions, and Acronyms
 
-This chapter establishes the common vocabulary of the Metadata and Payloads (MAP) Framework. Its definitions apply across use-case implementation guides and reusable transaction specifications unless an applicable governing standard provides a more specific definition. The terminology separates transport, packaging, information objects, transactions, work activities, and status reporting so that requirements do not inadvertently mix these boundaries.
+This chapter establishes the common vocabulary of the Metadata and Payloads (MAP) Framework. Its definitions apply across Use Case Implementation Guides and reusable transaction specifications unless an applicable governing standard provides a more specific definition. The terminology separates business entities, grouped technical actors, routing endpoints, transport, packaging, information objects, transactions, work activities, provenance, and status reporting so that requirements do not inadvertently mix these boundaries.
 
 This chapter is a reference, not a substitute for normative requirements. Implementers follow the applicable chapters and transaction definitions; authors use these terms consistently in their use-case guides. The acronym register in T.5 records expansions, while each independently readable chapter or transaction definition still expands abbreviations on first use.
 
@@ -11,7 +11,7 @@ This chapter is a reference, not a substitute for normative requirements. Implem
 
 # T.1 Exchange Terminology and Language Usage
 
-These terms distinguish the complete transported communication, the structured content carried within it, and the individual information objects. The distinctions apply throughout the MAP Framework and its use-case implementation guides.
+These terms distinguish the complete transported communication, the structured content carried within it, and the individual information objects. The distinctions apply throughout the MAP Framework and its Use Case Implementation Guides.
 
 ## T.1.1 Direct Message, Structured Payload, and Information Object
 

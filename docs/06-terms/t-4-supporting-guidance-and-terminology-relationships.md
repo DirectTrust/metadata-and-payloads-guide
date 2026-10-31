@@ -4,7 +4,7 @@ This section directs readers to the specifications that establish implementation
 
 ## T.4.1 Relationship to Normative Requirements
 
-Chapter 3 establishes common transaction architecture and technical requirements. Governed Generalized Transaction Definitions (GenTXDefs) in the Reusable Transaction Catalog (RTC) and the applicable Use-Case Transaction Definitions (UCTXDefs) specify additional or constrained requirements. Terms defined here do not turn conditional reporting or use-case-specific processing into universal requirements.
+Chapter 3 establishes common transaction architecture and technical requirements. Governed Generalized Transaction Definitions (GenTXDefs) in the Reusable Transaction Catalog (RTC) and the applicable Use Case Transaction Definitions (UCTXDefs) specify additional or constrained requirements. Chapter 2 applies the T.3 distinctions among business entities, grouped technical actors, Routing Targets, and provenance agents when describing exchanges and diagrams. Terms defined here do not turn conditional reporting or use case-specific processing into universal requirements.
 
 ## T.4.2 Relationship to Vocabulary and Code Systems
 
