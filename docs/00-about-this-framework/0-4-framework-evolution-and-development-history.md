@@ -11,16 +11,27 @@ From June through August 2026, a Summer Workshop applied MAP concepts to workflo
 The pilot experience led to refinements in the specification model and its technical guidance. Key areas included:
 
 - Separation of Framework architecture, RTC-governed GenTXDefs, UC IG requirements, and Author Kit guidance.
+
 - Transaction identity and correlation, including Shared Activities, transaction instances, and message exchanges.
+
 - Clearer distinctions among business participants, technical actors, intermediaries, and provenance agents.
+
 - Structured payload and workflow-unit conventions, including SubmissionSets, information objects, Tasks, cardinalities, and lifecycle.
+
 - Patient identity, assigning authorities, contextual information, and status distinctions.
+
 - Consistent metadata, classification, vocabulary, and terminology practices.
+
 - Message packaging and consistency between structured and human-readable content.
+
 - Workflow status and exception handling, including delivery, acceptance, processing, and anomaly reporting.
+
 - Endpoint capability discovery, routing, and workflow-status reporting destinations.
+
 - Document lifecycle, authentication, provenance, and progressive structuring.
+
 - Reusable implementation examples and reference material.
+
 - More consistent methods for authoring and validating UC IGs.
 
 ## 0.4.3 Evolution Toward a Reusable Architectural Foundation
