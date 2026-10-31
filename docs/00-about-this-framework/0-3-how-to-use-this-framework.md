@@ -12,6 +12,20 @@ The MAP Framework is intended for authors developing UC IGs and implementers app
 
 **Chapter 5 — Implementation Guidance** provides additional guidance for applying the Framework. The Terms chapter and appendices provide definitions, supporting explanations, mappings, examples, and references.
 
+The MAP Framework IG and a derivative Use Case IG use corresponding chapter organization to address different levels of specification. The Framework establishes general architecture, reusable requirements, and implementation guidance; a derivative UC IG applies and specializes those provisions for a particular business purpose. This parallel organization does not require duplication of inherited requirements or identical chapter content.
+
+**Figure 0-1. Parallel Organization of the MAP Framework IG and Derivative Use Case IGs**
+
+| Chapter | MAP Framework IG | Derivative Use Case IG |
+| --- | --- | --- |
+| **1. Foundations** | Defines the Framework's purpose, objectives, feasibility and scope, principles, and conformance model. | Defines these elements for the particular use case. |
+| **2. Actors and Transactions** | Establishes the architecture for responsible parties, participation roles, technical actors, and transaction relationships. | Identifies the parties, actors, transactions, and interactions supporting the use case. |
+| **3. Transaction Framework** | Establishes common transaction architecture and requirements and supports reusable GenTXDefs in the RTC. | Inherits common requirements and provides the applicable UCTXDefs, including specialized GenTXDefs and new transactions where necessary. |
+| **4. Endpoint Capability and Discovery** | Establishes how endpoint capabilities are expressed, published, and discovered. | Specifies the endpoint capabilities required to support the use case. |
+| **5. Implementation Guidance** | Provides common implementation guidance. | Supplements common guidance with instructions specific to the use case. |
+
+*Figure 0-1 is informative. Corresponding chapters address related concerns without necessarily containing identical material. Applicable requirements are determined by the Framework, the selected transaction definitions, and the derivative UC IG.*
+
 Authors developing a UC IG begin with the business problem, Information Exchange Objectives, participating organizations, and required exchanges. They then evaluate reusable patterns in the RTC and develop use-case-specific transaction definitions and other applicable constraints. The MAPUC Author Kit supports this work with structured authoring and validation resources. The analysis begins with the business need, not the existing catalog inventory.
 
 Each UC IG identifies its complete set of UCTXDefs in Chapter 3, including definitions that specialize selected GenTXDefs and new use-case transactions. A GenTXDef does not apply merely because it appears in the RTC. A workflow may also describe external or future interactions as placeholders; these do not independently establish complete MAP transaction specifications or implementation conformance obligations.
