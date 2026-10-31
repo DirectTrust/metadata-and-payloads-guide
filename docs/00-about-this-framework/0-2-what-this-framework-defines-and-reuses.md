@@ -1,9 +1,11 @@
 # 0.2 What This Framework Defines and Reuses
 
-The MAP Framework defines common architecture, terminology, and technical requirements for information exchange. Its reusable transaction ecosystem distinguishes the **Reusable Transaction Catalog (RTC)**, containing DirectTrust/MAP-governed **Generalized Transaction Definitions (GenTXDefs)**, from the **Use-Case Transaction Definitions (UCTXDefs)** published in each UC IG.
+The MAP Framework establishes architecture, terminology, and technical requirements that can be applied across multiple use cases. Its specification model distinguishes shared rules, reusable transaction patterns, and requirements specialized for a particular business workflow.
 
-The RTC provides generalized transaction patterns with deliberately identified points of variation. A UC IG applies and constrains those patterns for a business use case and may define new UCTXDefs where no suitable GenTXDef exists. The MAPUC Author Kit supplies the authoring process and quality practices. Neither catalog governance nor Author Kit formatting conventions automatically creates exchange conformance obligations.
+The Reusable Transaction Catalog (RTC) contains governed Generalized Transaction Definitions (GenTXDefs). Each GenTXDef describes a reusable transaction pattern and identifies the choices or constraints that a use case may specialize. A UC IG selects applicable patterns and specifies their use through Use-Case Transaction Definitions (UCTXDefs) in its Chapter 3. If no suitable GenTXDef exists, a UC IG may define a new UCTXDef.
 
-These boundaries allow common rules to remain stable, transactions to be reused, and new implementation experience to inform subsequent RTC governance without conflating the published specifications.
+The RTC identifies reusable Shared Activities and associates them with governed GenTXDefs. This allows a transaction pattern to be reused without carrying forward terminology or constraints unique to the use case in which it originated.
 
-The RTC identifies **Shared Activities** available for reuse and connects each to its governed GenTXDef. The Framework defines the common architectural rules for those activities, while a UC IG selects and constrains them in its UCTXDefs. This separation permits reuse without importing an originating use case's specialized terminology and cardinality into the RTC.
+A new transaction pattern defined in a UC IG may later be evaluated for generalization and inclusion in the RTC through DirectTrust MAP governance. Publishing a UCTXDef does not, by itself, establish it as a governed GenTXDef.
+
+The MAPUC Author Kit provides templates, instructions, and validation practices for preparing UC IGs, including approaches that support AI-assisted analysis and documentation. The Author Kit guides specification development; it does not itself establish exchange conformance requirements for implementing actors.
