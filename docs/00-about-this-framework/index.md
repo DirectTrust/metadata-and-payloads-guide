@@ -2,13 +2,13 @@
 
 This chapter introduces the Metadata and Payloads (MAP) Framework for Direct, explains how its three complementary subframeworks and supporting specifications relate to one another, and guides authors and implementers in applying them. It also provides context on the Framework’s development and evolution.
 
-[0.2 What This Framework Defines and Reuses](./0-2-what-this-framework-defines-and-reuses.md)
+[What This Framework Defines and Reuses](./0-2-what-this-framework-defines-and-reuses.md)
 
-[0.3 How to Use This Framework](./0-3-how-to-use-this-framework.md)
+[How to Use This Framework](./0-3-how-to-use-this-framework.md)
 
-[0.4 Framework Evolution and Development History](./0-4-framework-evolution-and-development-history.md)
+[Framework Evolution and Development History](./0-4-framework-evolution-and-development-history.md)
 
-## 0.1 Framework Overview
+## Framework Overview
 
 The Direct Standard™ (“Direct”) provides a standards-based mechanism for securely exchanging information between trusted endpoints. Direct supports the exchange of human-readable messages and attachments, but transport alone does not establish common expectations for information content, interpretation, or workflow processing.
 
