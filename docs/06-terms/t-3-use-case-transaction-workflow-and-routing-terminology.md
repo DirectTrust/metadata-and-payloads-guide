@@ -4,7 +4,28 @@ These definitions distinguish business objectives, reusable exchange specificati
 
 ## T.3.1 Use Case Framework and Architectural Roles
 
-The MAP Use Case Framework connects Information Exchange Objectives to business scenarios, responsible parties, required exchanges, and transaction architecture. A *Responsible Party* is an individual or organization accountable for an aspect of the business use case; a *Business Role* describes its business responsibility. A *Transaction Participation Role* describes how a participant takes part in a specified exchange, while a *Technical Actor* is the system role assigned technical transaction responsibilities.
+The MAP Use Case Framework connects Information Exchange Objectives to business scenarios, responsible parties, required exchanges, and transaction architecture. The following terms distinguish business accountability, participation in an exchange, and the technical functions that implement it.
+
+| Term | Meaning and use |
+| --- | --- |
+| Responsible Party | An individual or organization accountable for an aspect of the business use case. |
+| Business Role | The business responsibility fulfilled by a Responsible Party. |
+| Transaction Participant | A party participating in a Shared Activity under an applicable transaction definition. |
+| Transaction Participation Role | The role fulfilled by a Transaction Participant in a particular Shared Activity. It describes participation in the exchange rather than the system functions used to perform it. |
+| Technical Actor | A logical system role assigned specific technical responsibilities under an applicable transaction definition. A Technical Actor need not correspond to a separate deployed system. |
+| Sender Actor | A grouped Technical Actor comprising the Content Creator and Message Sender functions. |
+| Receiver Actor | A grouped Technical Actor comprising the Message Receiver and Content Consumer functions. |
+
+The individual Technical Actors are described below. These descriptions identify functions for architectural discussion; they do not independently establish conformance obligations.
+
+| Technical Actor | Primary function |
+| --- | --- |
+| Content Creator | Prepares information content and the applicable structured payload. |
+| Message Sender | Constructs and submits the Direct message for transmission. |
+| Message Receiver | Receives the Direct message and performs applicable message-level processing. |
+| Content Consumer | Processes the received structured payload for the intended receiving workflow. |
+
+A Responsible Party may fulfill a Transaction Participation Role through one or more Technical Actors. Grouping technical functions into a Sender Actor or Receiver Actor does not require their deployment in a single physical system. Identifying a Technical Actor does not, by itself, establish business accountability or an assertion of provenance. Chapter 2 describes the relationships among participants, roles, and technical actors; Chapter 3 and the applicable transaction definitions specify technical obligations.
 
 ## T.3.2 Shared Activities and Transaction Definitions
 
@@ -43,4 +64,6 @@ A *Routing Target* is the Direct address selected for a particular message under
 
 ## T.3.6 Provenance Activities and Assertions
 
-A *Provenance Activity* is an activity affecting the provenance of information and described in a provenance assertion, including participants and relevant information objects as applicable. A *Provenance Assertion* records information about such an activity. An actor preserves or reports provenance according to the requirements assigned by the applicable transaction definition; the terminology does not impose universal reporting of every intermediary activity. Appendix E explains the relationship to document lifecycle and provenance.
+A *Provenance Activity* is an activity affecting the provenance of information and described in a provenance assertion, including participants and relevant information objects as applicable. A *Provenance Assertion* records information about such an activity. A *Provenance Agent* is a person, organization, or system identified as participating in an activity described by a provenance assertion. The agent's asserted participation in that historical activity is distinct from the Technical Actor's assigned function or a Transaction Participant's role in an exchange.
+
+An actor preserves or reports provenance according to the requirements assigned by the applicable transaction definition; the terminology does not impose universal reporting of every intermediary activity. Appendix E explains the relationship to document lifecycle and provenance.
