@@ -1,6 +1,6 @@
 # 0.4 Framework Evolution and Development History
 
-The MAP Framework was first published on February 26, 2026. Subsequent pilot work clarified the distinction between common architecture, reusable transaction definitions, and use-case-specific requirements. This section describes that evolution for context; it does not imply that a later development baseline has been formally published or approved.
+The MAP Framework was first published on February 26, 2026. Subsequent pilot work clarified the three-subframework architecture, the distinction between reusable transaction definitions and use-case-specific requirements, and the role of supporting authoring resources. This section describes that evolution for context; it does not imply that a later development baseline has been formally published or approved.
 
 ## 0.4.1 Summer 2026 Workshop — Framework Piloting and Evolution
 
@@ -36,15 +36,19 @@ The pilot experience led to refinements in the specification model and its techn
 
 ## 0.4.3 Evolution Toward a Reusable Architectural Foundation
 
-Early MAP materials placed architectural requirements and guidance for preparing UC IGs alongside one another. Pilot experience demonstrated the value of distinguishing requirements that govern an information exchange from instructions that help authors develop its specification.
+Early MAP materials placed architectural requirements and guidance for preparing UC IGs alongside one another. Pilot experience demonstrated the value of distinguishing requirements governing information exchange from instructions supporting the development of specifications.
 
-The resulting specification model includes the MAP Use Case Framework and MAP Transaction Framework for common architecture and requirements; Direct Endpoint Capability Statements for describing endpoint-supported exchange capabilities; the RTC for governed reusable transaction patterns; and UC IGs for use-case-specific objectives, workflows, and requirements. The MAPUC Author Kit provides a separate set of authoring and validation resources. The Framework, applicable GenTXDefs, and UC IGs establish exchange requirements; the Author Kit supports the development of those specifications.
+The evolving architecture organized the MAP Framework into three complementary subframeworks: the MAP Use Case Framework, the MAP Transaction Framework, and the MAP Endpoint Capability Statement Framework. The latter encompasses both the expression of supported endpoint capabilities and mechanisms for publishing and discovering those declarations.
+
+The RTC complements the Transaction Framework with governed reusable GenTXDefs. Individual UC IGs establish use-case-specific requirements, while the MAPUC Author Kit provides separate authoring and validation resources. This organization supports reuse and consistent implementation expectations while allowing each component to evolve within its defined responsibility.
 
 ## 0.4.4 Implications for the Framework’s Organization
 
-The chapter organization reflects these distinctions. Chapter 1 introduces the use-case specification model. Chapter 2 describes participating parties, actors, and interaction patterns. Chapter 3 defines common transaction architecture and requirements, which applicable GenTXDefs and UCTXDefs further specify. Chapter 4 addresses endpoint capabilities and discovery, and Chapter 5 provides implementation guidance. The Author Kit supplies methods and templates for preparing UC IG artifacts.
+The chapter organization separates overall foundations, use-case architecture, common transaction requirements, and endpoint capability expression and discovery into distinct but coordinated areas.
 
-Although the Framework helps authors understand how to apply the specification model, its architectural and technical requirements must be distinguished from the Author Kit’s authoring procedures. Each UC IG identifies the requirements that apply to its defined use case, together with the relevant inherited requirements.
+Chapter 1 establishes the foundations of the entire MAP Framework. Chapter 2 completes the MAP Use Case Framework. Chapter 3 establishes the MAP Transaction Framework, and Chapter 4 establishes the MAP Endpoint Capability Statement Framework, including capability discovery mechanisms. Chapter 5 provides implementation guidance.
+
+The Framework's architectural and technical requirements remain distinct from the MAPUC Author Kit's authoring procedures. Each UC IG identifies the requirements applicable to its defined use case, together with relevant inherited requirements.
 
 ## 0.4.5 October 16, 2026 Development Baseline
 
