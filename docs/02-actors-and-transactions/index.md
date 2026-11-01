@@ -1,39 +1,16 @@
 # Chapter 2 — Actors and Transactions
 
-This chapter explains the participating parties, business roles, technical actors, transaction identities, and interaction patterns used in MAP models. It introduces how Generalized Transaction Definitions (GenTXDefs) in the Reusable Transaction Catalog (RTC) relate to Use-Case Transaction Definitions (UCTXDefs) in Use-Case Implementation Guides (UC IGs) and how external placeholder transactions can appear without creating MAP obligations.
-The use-case analysis progresses from objectives to scenarios, responsible organizations, required exchanges, RTC evaluation, and architectural outputs. Transactions are selected only after the required exchanges are understood.
+Chapter 2 of the MAP Framework establishes the common architecture for identifying responsible parties and business roles, transaction participants and participation roles, technical actors and system formations, and the information flows and transactions that support business workflows.
 
-> Proposed 20260828 development baseline, reconstructed October 2026; Author review required.
+A derivative Use Case Implementation Guide (UC IG) follows the corresponding Chapter 2 structure but applies these concepts to a particular use case. Its Chapter 2 identifies participating parties and actors, analyzes the information exchanges needed to satisfy its Information Exchange Objectives, and lists the resulting transactions for its specific use case. The Framework defines the architectural method and current reusable transaction inventory; a UC IG documents its use case-specific information exchange analysis and transaction requirements to meet the use case.
 
-- [2.1.1 Responsible Parties](./2-1-1-responsible-parties.md)
-- [2.1.2 Organizational and Individual Capacities](./2-1-2-organizational-and-individual-capacities.md)
-- [2.1.3 Business Roles and Responsibilities](./2-1-3-business-roles-and-responsibilities.md)
-- [2.2 Transaction Participants and Participation Roles](./2-2-transaction-participants-and-participation-roles.md)
-- [2.2.1 Sender and Receiver Participation](./2-2-1-sender-and-receiver-participation.md)
-- [2.2.2 Initiator and Responder Relationships](./2-2-2-initiator-and-responder-relationships.md)
-- [2.2.3 Participation Across Organizational Boundaries](./2-2-3-participation-across-organizational-boundaries.md)
-- [2.3 Technical Actors and System Formations](./2-3-technical-actors-and-system-formations.md)
-- [2.3.1 Technical Actor Responsibilities](./2-3-1-technical-actor-responsibilities.md)
-- [2.3.2 Actor Grouping](./2-3-2-actor-grouping.md)
-- [2.3.3 Intermediaries and Delegated Processing](./2-3-3-intermediaries-and-delegated-processing.md)
-- [2.3.4 Relationship Between Participants and Technical Actors](./2-3-4-relationship-between-participants-and-technical-actors.md)
-- [2.4 MAP Transactions and Transaction Definitions](./2-4-map-transactions-and-transaction-definitions.md)
-- [2.4.1 Transaction as a Shared Activity](./2-4-1-transaction-as-a-shared-activity.md)
-- [2.4.2 Transaction Identity and Instances](./2-4-2-transaction-identity-and-instances.md)
-- [2.4.3 Reusable Transaction Definitions](./2-4-3-reusable-transaction-definitions.md)
-- [2.4.4 Transaction Selection and Use-Case Constraints](./2-4-4-transaction-selection-and-use-case-constraints.md)
-- [2.4.5 Relationship to Transaction Processing Requirements](./2-4-5-relationship-to-transaction-processing-requirements.md)
-- [2.5 Transaction Interactions and Information Flow](./2-5-transaction-interactions-and-information-flow.md)
-- [2.5.1 Transaction Initiation and Response](./2-5-1-transaction-initiation-and-response.md)
-- [2.5.2 Solicited and Unsolicited Exchanges](./2-5-2-solicited-and-unsolicited-exchanges.md)
-- [2.5.3 Multi-Transaction Workflows](./2-5-3-multi-transaction-workflows.md)
-- [2.5.4 Exchange Across Intermediaries](./2-5-4-exchange-across-intermediaries.md)
-- [2.6 Architectural Diagrams and Examples](./2-6-architectural-diagrams-and-examples.md)
-- [2.6.1 Basic Two-Party Transaction](./2-6-1-basic-two-party-transaction.md)
-- [2.6.2 Grouped Technical Actors](./2-6-2-grouped-technical-actors.md)
-- [2.6.3 Intermediated Exchange](./2-6-3-intermediated-exchange.md)
-- [2.6.4 Multiple Transactions Supporting a Business Workflow](./2-6-4-multiple-transactions-supporting-a-business-workflow.md)
+Sections 2.1–2.3 establish the distinctions needed for analysis. Section 2.4 begins with the Information Exchange Objectives already defined in Chapter 1 and analyzes the required information flows. Section 2.5 identifies the resulting transaction inventory and reusable RTC definitions. Section 2.6 establishes diagram notation and examples. Common transaction requirements reside in Framework Chapter 3; individual GenTXDef chapters follow it. Derivative UC IGs use a concise Chapter 3.1 referencing the Framework and then provide individual UCTXDef chapters.
 
-# 2.1 Responsible Parties and Business Roles
+## Sections
 
-Information exchange involves people and organizations accountable for business activities. Their roles must be understood separately from the technical systems that send, relay, or receive messages. A responsible party may operate through multiple systems, and a system may support several parties or roles under explicit arrangements.
+- [2.1 — Business Entities And Information Exchange Roles](2-1-business-entities-and-information-exchange-roles.md)
+- [2.2 — Technical Actors And System Actor Roles](2-2-technical-actors-and-system-actor-roles.md)
+- [2.3 — Actor Formations And Organizational Relationships](2-3-actor-formations-and-organizational-relationships.md)
+- [2.4 — Transaction Interactions And Information Flow](2-4-transaction-interactions-and-information-flow.md)
+- [2.5 — Transaction Listing](2-5-transaction-listing.md)
+- [2.6 — Diagrams And Examples](2-6-diagrams-and-examples.md)
