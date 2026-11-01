@@ -1,34 +1,18 @@
 # Chapter 4 — Endpoint Capability and Discovery
 
-Endpoint capability declarations identify which use cases, transactions, Technical Actor Roles, metadata representations, information objects, and workflow responsibilities an endpoint supports. Capability discovery and implementation selection are distinct from organization type and from transport delivery.
+This chapter describes recommended practices for communicating the interoperability capabilities of endpoints participating in exchanges defined by the MAP Framework and its associated Use Case Implementation Guides.
 
-**Retrospective development baseline (20260828):** The Reusable Transaction Catalog (RTC) is established conceptually but contains **no Generalized Transaction Definitions (GenTXDefs)**. Use-Case Transaction Definitions (UCTXDefs) may be authored directly from the Framework. Material generalized from October 2026 maternal-health drafts is adapted here as a reconstruction, not represented as already published on August 28. Later transaction-specific requirements and provisional technical artifacts do not become universal requirements by their appearance in the source drafts.
+The MAP Framework supports progressive interoperability. Implementations may differ in the transactions, information objects, metadata representations, and workflow capabilities they support. Communicating these differences helps exchange partners determine how to interoperate successfully.
 
-## Sections
+At this early stage of MAP development, the Framework encourages capability transparency without requiring sophisticated capability publication or automated discovery infrastructure. Human-readable descriptions provide a practical starting point. Machine-processable capability declarations may be adopted as implementations mature.
 
-- [4 10 send workflow status workflow status capability](4-10-send-workflow-status-workflow-status-capability.md)
-- [4 11 identifier capabilities](4-11-identifier-capabilities.md)
-- [4 12 terminology capabilities](4-12-terminology-capabilities.md)
-- [4 13 intended workflow](4-13-intended-workflow.md)
-- [4 14 endpoint discovery and capability resolution](4-14-endpoint-discovery-and-capability-resolution.md)
-- [4 15 testing and operational support](4-15-testing-and-operational-support.md)
-- [4 2 map endpoint capabilitystatement profile](4-2-map-endpoint-capabilitystatement-profile.md)
-- [4 3 endpoint and organization identification](4-3-endpoint-and-organization-identification.md)
-- [4 4 supported use cases](4-4-supported-use-cases.md)
-- [4 5 transaction capabilities and technical actor roles](4-5-transaction-capabilities-and-technical-actor-roles.md)
-- [4 6 structured payload metadata representation capabilities](4-6-structured-payload-metadata-representation-capabilities.md)
-- [4 7 metadata representation selection](4-7-metadata-representation-selection.md)
-- [4 8 information object and human readable communication capabilities](4-8-information-object-and-human-readable-communication-capabilities.md)
-- [4 9 direct message delivery and structured payload workflow status](4-9-direct-message-delivery-and-structured-payload-workflow-status.md)
+## Chapter Sections
 
-# 4.1 Purpose and Conformance Model
+- [4.1 Purpose and Scope](4-1-purpose-and-scope.md)
+- [4.2 Human-Readable Endpoint Capability Descriptions](4-2-human-readable-endpoint-capability-descriptions.md)
+- [4.3 Recommended Capability Description Content](4-3-recommended-capability-description-content.md)
+- [4.4 Endpoint Discovery and Capability Interpretation](4-4-endpoint-discovery-and-capability-interpretation.md)
+- [4.5 Optional Machine-Processable CapabilityStatements](4-5-optional-machine-processable-capabilitystatements.md)
+- [4.6 Relationship to Transaction Requirements and Conformance](4-6-relationship-to-transaction-requirements-and-conformance.md)
 
-A CapabilityStatement provides a computable interoperability contract. Its declarations identify the supported combinations of transaction, Technical Actor Role, metadata representation, information-object option, and workflow status responsibility. These combinations support exchange configuration and define applicable conformance tests.
-
-Endpoint → Use Case → Transaction → Technical Actor Role → Supported Exchange Options → Workflow Status Responsibilities. This chain organizes capability selection; it is not a transaction processing lifecycle.
-
-The Sender Actor and Receiver Actor capabilities SHALL be declared independently. supportsSend identifies Sender Actor support; supportsReceive identifies Receiver Actor support. For example, supportsSend=false and supportsReceive=true declares support in the Receiver Actor role. An endpoint MAY support both roles.
-
-Technical Actor Roles describe functional capabilities, rather than the organization’s business role or its transaction participation role. An ambulatory obstetric endpoint, for example, may send outpatient visit notifications and receive notifications generated by other providers. Organization labels such as hospital, payer, HIE, data utility, or HISP do not establish either capability.
-
-Different Direct addresses or services operated by the same organization MAY have materially different capability sets. Publish a separate CapabilityStatement when those differences affect interoperability.
+This chapter is an editorial working draft and has not yet been approved as normative MAP Framework content.
