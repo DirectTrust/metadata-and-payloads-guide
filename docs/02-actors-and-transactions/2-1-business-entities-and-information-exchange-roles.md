@@ -22,9 +22,9 @@ A Responsible Party is a person or business entity accountable for an aspect of 
 
 Information Source and Intended Recipient identify the end-to-end business relationship. Information Sender and Information Recipient are relative to a particular hop; an Intermediary may be an Information Recipient on one hop and an Information Sender on the next. Neither business role determines which software component sends or receives the message.
 
-![Figure 2-1](images/figure-2-1.png)
+![Figure 2-1](/images/actors-and-transactions/figure-2-1.png)
 
-![Figure 2-1. Business entity roles across a two-hop exchange. The hop-specific labels change at the intermediary; the end-to-end Information Source and Intended Recipient do not.](images/figure-2-1.png)
+![Figure 2-1. Business entity roles across a two-hop exchange. The hop-specific labels change at the intermediary; the end-to-end Information Source and Intended Recipient do not.](/images/actors-and-transactions/figure-2-1.png)
 
 *Figure 2-1. Business entity roles across a two-hop exchange. The hop-specific labels change at the intermediary; the end-to-end Information Source and Intended Recipient do not.*
 

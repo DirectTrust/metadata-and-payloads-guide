@@ -4,9 +4,9 @@ A grouped actor represents logical capabilities, not a required product boundary
 
 Routing and notification endpoints are separate from actor roles. A Routing Target is the Direct address selected for the current message under applicable routing rules. The Designated Notification Recipient is the endpoint designated for transport-level MDNs by Disposition-Notification-To; a Workflow Status Update Endpoint receives a correlated Workflow Status Report when required. These may use different Direct addresses, even when associated with the same organization. For a status report, its designated Workflow Status Update Endpoint is the Routing Target for that report. Refer to Chapter 5.6 for Direct address identity, routing, and endpoint capability.
 
-![Figure 2-3](images/figure-2-3.png)
+![Figure 2-3](/images/actors-and-transactions/figure-2-3.png)
 
-![Figure 2-3. Organization B operates Receiver Actor B for the first hop and Sender Actor B for the second hop. Each outgoing message has its own Routing Target, a technical endpoint rather than a business entity role.](images/figure-2-3.png)
+![Figure 2-3. Organization B operates Receiver Actor B for the first hop and Sender Actor B for the second hop. Each outgoing message has its own Routing Target, a technical endpoint rather than a business entity role.](/images/actors-and-transactions/figure-2-3.png)
 
 *Figure 2-3. Organization B operates Receiver Actor B for the first hop and Sender Actor B for the second hop. Each outgoing message has its own Routing Target, a technical endpoint rather than a business entity role.*
 
