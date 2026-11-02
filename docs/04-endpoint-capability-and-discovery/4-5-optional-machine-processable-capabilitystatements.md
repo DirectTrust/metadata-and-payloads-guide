@@ -10,7 +10,7 @@ Implementers choosing to publish a FHIR CapabilityStatement should use applicabl
 
 The proposed MAP Endpoint CapabilityStatement profile, identified by the canonical URL:
 
-`http://objects.directtrust.org/standards/fhir/StructureDefinition/map-endpoint-capabilitystatement`
+http://objects.directtrust.org/standards/fhir/StructureDefinition/map-endpoint-capabilitystatement
 
 may serve as a basis for further development and implementation experimentation, subject to verification of its published status and technical constraints.
 
