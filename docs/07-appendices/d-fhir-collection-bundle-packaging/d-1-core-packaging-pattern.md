@@ -1,6 +1,6 @@
 # D.1 Core Packaging Pattern
 
-Status: Approved; predecessor reconciliation pending.
+Common FHIR Collection Bundle packaging pattern.
 
 The MAP Framework supports a FHIR representation of the Structured Package Payload exchanged in a MAP Transaction Instance. This appendix specifies the common FHIR packaging and metadata mapping guidance applicable across MAP transactions.
 
@@ -10,10 +10,14 @@ For the FHIR metadata representation, the Structured Package Payload is represen
 
 The FHIR representation preserves the common MAP package architecture:
 
-- Exactly one SubmissionSet, represented using a FHIR List.
+- Exactly one current transaction SubmissionSet, represented using a FHIR List with List.mode=working. An applicable Transaction Definition MAY additionally require an identification-only List with List.mode=snapshot to identify an earlier SubmissionSet; that additional List is not the current transaction SubmissionSet.
+
 - One primary submitted information object and zero or more secondary submitted information objects.
+
 - Zero or one Workflow Activity Task, unless the applicable Transaction Definition imposes a more restrictive requirement.
+
 - Supporting resources, including Provenance information where applicable.
+
 The SubmissionSet identifies the Shared Activity independently of whether a Workflow Activity Task is present. It also identifies the submitted information objects through its membership relationships.
 
 The FHIR Collection Bundle provides a packaging representation of the Structured Package Payload. It does not change the semantics of the Shared Activity, the SubmissionSet, or the submitted information objects.
@@ -21,3 +25,4 @@ The FHIR Collection Bundle provides a packaging representation of the Structured
 The detailed Bundle requirements are specified in Section D.2. SubmissionSet and DocumentEntry metadata mappings are specified in Sections D.3 and D.4, respectively.
 
 Transaction-specific processing, additional constraints, and requirements are established by the applicable Transaction Definition rather than by this common packaging pattern.
+

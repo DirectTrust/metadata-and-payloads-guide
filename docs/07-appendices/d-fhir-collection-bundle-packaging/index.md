@@ -1,17 +1,16 @@
-# Appendix D — FHIR Collection Bundle Packaging
+# Appendix D — FHIR Metadata and Payload Mapping
 
-MAP Framework 20261016 — Consolidated Working Draft V3 (2026-11-01).
+MAP Framework 20261016 • Consolidated Technical Mapping Draft V6 • 2026-11-02
 
-This appendix specifies the FHIR Collection Bundle representation of the MAP Structured Package Payload. Its seven sections address the common packaging pattern, metadata mappings, submitted information objects, Provenance, and conformance.
+Coordinated mapping revision: preserves the independent FHIR R4 List profiling model, current working List and original snapshot List distinction, and the original sourcePatientId correlation mapping.
 
-**Editorial status:** Working draft. D.1 approved; D.2 provisional; D.3–D.4 mapping inventories require technical verification; D.5–D.6 architectural decisions approved; D.7 principles provisionally approved. Technical verification and transaction-specific transfer work are tracked separately.
+FHIR Profiling Approach and Alignment with IHE MHD. The MAP Framework adopts independent FHIR profiling with deliberate alignment to IHE Mobile Access to Health Documents (MHD). MAP FHIR profiles are defined against applicable FHIR R4 base resources and do not require formal inheritance from IHE MHD profiles. MAP reuses established IHE MHD metadata conventions, extensions, and resource representation patterns wherever appropriate. MAP-specific profiles and extensions express requirements established by the MAP Framework, including requirements not addressed by IHE MHD or requiring a different representation. Differences from IHE MHD are documented where they affect interoperability or implementation expectations. Alignment does not itself establish conformance to IHE MHD profiles; conformance claims require satisfaction of applicable requirements and appropriate validation evidence. This appendix specifies FHIR mappings for MAP metadata. Governing metadata semantics, cardinalities, and obligations remain those established by the normative MAP Framework requirements.
 
-## Sections
 
-- [D.1 Core Packaging Pattern](d-1-core-packaging-pattern.md)
-- [D.2 Bundle Requirements](d-2-bundle-requirements.md)
-- [D.3 SubmissionSet to FHIR List Mapping](d-3-submissionset-to-fhir-list-mapping.md)
-- [D.4 DocumentEntry to FHIR DocumentReference Mapping](d-4-documententry-to-fhir-documentreference-mapping.md)
-- [D.5 Representing the Payload Objects](d-5-representing-the-payload-objects.md)
-- [D.6 Provenance Collection Bundles and Target Resolution](d-6-provenance-collection-bundles-and-target-resolution.md)
-- [D.7 Mapping Constraints and Conformance](d-7-mapping-constraints-and-conformance.md)
+- [D.1](d-1-core-packaging-pattern.md)
+- [D.2](d-2-bundle-requirements.md)
+- [D.3](d-3-submissionset-to-fhir-list-mapping.md)
+- [D.4](d-4-documententry-to-fhir-documentreference-mapping.md)
+- [D.5](d-5-representing-the-payload-objects.md)
+- [D.6](d-6-provenance-collection-bundles-and-target-resolution.md)
+- [D.7](d-7-mapping-constraints-and-conformance.md)
