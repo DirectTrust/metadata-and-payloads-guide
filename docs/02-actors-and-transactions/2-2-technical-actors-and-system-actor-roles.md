@@ -12,9 +12,9 @@ A Technical Actor is a logical system role rather than a physical deployment uni
 | Receiver Actor | Message Receiver + Content Consumer | Receives the message and processes or consumes the content for the supported workflow. |
 
 
-![Figure 2-2](images/figure-2-2.png)
+![Figure 2-2](/images/actors-and-transactions/figure-2-2.png)
 
-![Figure 2-2. Grouped system actors and constituent functions. Normative requirements attach to the grouped actors; the diagram identifies the functional locations for content and provenance processing.](images/figure-2-2.png)
+![Figure 2-2. Grouped system actors and constituent functions. Normative requirements attach to the grouped actors; the diagram identifies the functional locations for content and provenance processing.](/images/actors-and-transactions/figure-2-2.png)
 
 *Figure 2-2. Grouped system actors and constituent functions. Normative requirements attach to the grouped actors; the diagram identifies the functional locations for content and provenance processing.*
 
