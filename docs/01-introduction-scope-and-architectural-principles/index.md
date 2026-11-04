@@ -1,4 +1,4 @@
-# 1 MAP Framework Foundations
+# Overview
 
 This chapter describes the purpose, objectives, feasibility and scope, foundational principles, and requirements and conformance expectations of the MAP Framework as a whole. Chapters 1 and 2 together establish the MAP Use Case Framework; Chapter 3 establishes the MAP Transaction Framework; and Chapter 4 establishes the MAP Endpoint Capability Statement Framework.
 

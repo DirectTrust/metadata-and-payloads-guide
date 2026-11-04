@@ -1,4 +1,4 @@
-# About the Metadata and Payloads Framework for Direct
+# About this Guide
 
 This chapter introduces the Metadata and Payloads (MAP) Framework for Direct, explains how its three complementary subframeworks and supporting specifications relate to one another, and guides authors and implementers in applying them. It also provides context on the Framework’s development and evolution.
 

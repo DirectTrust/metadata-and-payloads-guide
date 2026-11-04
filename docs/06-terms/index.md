@@ -1,4 +1,4 @@
-# Chapter T — Terms, Definitions, and Acronyms
+# Chapter T — Terms
 
 This chapter establishes the common vocabulary of the Metadata and Payloads (MAP) Framework. Its definitions apply across Use Case Implementation Guides and reusable transaction specifications unless an applicable governing standard provides a more specific definition. The terminology separates business entities, grouped technical actors, routing endpoints, transport, packaging, information objects, transactions, work activities, provenance, and status reporting so that requirements do not inadvertently mix these boundaries.
 
