@@ -81,7 +81,7 @@
     ]
   },
   {
-    "text": "Common Transaction Architecture and Requirements",
+    "text": "Transaction Framework",
     "link": "/03-01-map-transaction-framework/",
     "collapsed": true,
     "items": [
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "text": "MAP Reusable Transactions Catalog",
+    "text": "Reusable Transactions Catalog",
     "link": "/03-02-map-transaction-definitions/",
     "collapsed": true,
     "items": [

@@ -1,4 +1,4 @@
-# Chapter 3 — Common Transaction Architecture and Requirements
+# Transaction Framework
 
 Chapter 3 establishes the MAP Transaction Framework, a common transaction architecture that human authors and AI assistants, implementers, and governance reviewers use to understand, specify, evaluate, specialize, and generalize MAP transactions. It provides a shared conceptual and technical foundation, rather than requiring each Use Case Implementation Guide (UC IG) to reproduce the same architecture.
 

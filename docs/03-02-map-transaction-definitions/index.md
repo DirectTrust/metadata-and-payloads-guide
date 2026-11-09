@@ -1,4 +1,4 @@
-# MAP Reusable Transactions Catalog
+# Reusable Transactions Catalog
 
 This catalog contains the four generalized transaction definitions (GenTXDefs) available in this release. Each GenTXDef states transaction-specific constraints and inherits the common requirements of the MAP Framework. These are editorial working drafts; proposed requirements and open verification items remain as recorded in the source Word documents.
 

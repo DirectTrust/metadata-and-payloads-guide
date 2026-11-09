@@ -276,3 +276,8 @@
   padding-top: 12px;
   border-top: 1px solid var(--vp-c-divider);
 }
+
+/* No divider between Transaction Framework and Reusable Transactions Catalog in the sidebar. */
+.VPSidebar .group:has(> .VPSidebarItem > .item > a[href*="/03-02-map-transaction-definitions/"]) {
+  border-top: none;
+}
