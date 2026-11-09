@@ -14,9 +14,3 @@ title: Metadata and Payloads Guide
     <a class="home-hero-btn brand" href="/metadata-and-payloads-guide/03-01-map-transaction-framework/">Transaction Framework</a>
   </div>
 </div>
-
-**Retrospectively reconstructed October 2026. Not a historical August 28 publication.**
-
-This author-review development repository follows the proposed enumerated chapter structure.
-
-**Important:** Chapter and section files that carry a development-draft notice are structural placeholders, not completed or approved normative amendments.
