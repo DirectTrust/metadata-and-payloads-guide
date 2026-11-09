@@ -270,11 +270,19 @@
   border-top: 1px solid var(--vp-c-divider);
 }
 
-/* Divider above the generated Version History entry at the bottom of the sidebar. */
+/* Divider above the generated Version History entry at the bottom of the sidebar. There must be exactly
+   one line. When Version History is its own sidebar group (the usual case) VitePress already draws a line
+   above every group, so the entry's own line is suppressed; when it shares a group with the entry above it,
+   the entry draws the line itself. scripts/build-site.sh injects the same two rules for older refs. */
 .VPSidebarItem:has(> .item > a[href$="/version-history"]) {
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid var(--vp-c-divider);
+}
+.VPSidebar .group:has(> .VPSidebarItem > .items > .VPSidebarItem:first-child > .item > a[href$="/version-history"]) .VPSidebarItem:has(> .item > a[href$="/version-history"]) {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 /* No divider between Transaction Framework and Reusable Transactions Catalog in the sidebar. */

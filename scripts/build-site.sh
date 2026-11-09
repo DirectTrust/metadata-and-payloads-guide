@@ -48,8 +48,8 @@ import base from './config.base.mts'
 const tc: any = base.themeConfig ?? {}
 export default {
   ...base,
-  // Divider above Version History (current refs get this from theme/custom.css)
-  head: [...(base.head ?? []), ['style', {}, '.VPSidebarItem:has(> .item > a[href$="/version-history"]) { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); }']],
+  // Divider above Version History: exactly one line, whichever way the sidebar nests it (same rules as theme/custom.css)
+  head: [...(base.head ?? []), ['style', {}, '.VPSidebarItem:has(> .item > a[href$="/version-history"]) { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--vp-c-divider); } .VPSidebar .group:has(> .VPSidebarItem > .items > .VPSidebarItem:first-child > .item > a[href$="/version-history"]) .VPSidebarItem:has(> .item > a[href$="/version-history"]) { margin-top: 0; padding-top: 0; border-top: none; }']],
   themeConfig: { ...tc, sidebar: [...(tc.sidebar ?? []), { text: 'Version History', link: '/version-history' }] }
 }
 EOF_SHIM
