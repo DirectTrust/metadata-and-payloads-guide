@@ -2,9 +2,9 @@
 
 Documentation site for **DS2024-07-100-2026 — Framework for Metadata and Payloads via the Direct Standard® (Part I: Framework Foundations)**, published by DirectTrust.
 
-This content is the 2026-10-16 working version of the framework (the previously published single-folder content is preserved in the `DS2024-07-100-2026` tag) and is published as a standalone [VitePress](https://vitepress.dev) site, written in Markdown, at `https://directtrust.github.io/metadata-and-payloads-guide/` via GitHub Pages.
+This content is the 2026-10-16 working version of the framework (the previously published single-folder content is preserved in the `DS2024-07-100-2026` tag) and is published as a standalone [VitePress](https://vitepress.dev) site, written in Markdown, at `https://assets.directtrust.org/metadata-and-payloads-guide/` via GitHub Pages.
 
-This repo is a project site (not the org's special `DirectTrust.github.io` root-domain repo), so it's served under a path rather than at the bare `directtrust.github.io` domain. VitePress is configured with `base: '/metadata-and-payloads-guide/'` in `docs/.vitepress/config.mts` to match — if this repo is ever renamed, that value has to be updated to match, or every internal link/image/asset path breaks.
+This repo is a project site (not the org's special `DirectTrust.github.io` root-domain repo), so it's served under a path rather than at the bare `assets.directtrust.org` domain. VitePress is configured with `base: '/metadata-and-payloads-guide/'` in `docs/.vitepress/config.mts` to match — if this repo is ever renamed, that value has to be updated to match, or every internal link/image/asset path breaks.
 
 This README is for anyone writing or editing documentation content, not just developers — the day-to-day workflow only requires editing Markdown files and running two npm commands.
 
@@ -56,7 +56,7 @@ metadata-and-payloads-guide/
 
 ## How it gets hosted
 
-GitHub Pages is configured to deploy from GitHub Actions (repo **Settings → Pages → Build and deployment → Source → GitHub Actions**), not from a branch. `.github/workflows/deploy.yml` runs on every push to `main` or `develop` (and when a release is published): it runs `scripts/build-site.sh`, which builds every version into one site, and hands that folder to GitHub's official Pages deploy action. No separate server, no Jekyll — the workflow *is* the deploy pipeline. A push to `main` is live at `https://directtrust.github.io/metadata-and-payloads-guide/` about a minute later. You can watch progress under the repo's **Actions** tab.
+GitHub Pages is configured to deploy from GitHub Actions (repo **Settings → Pages → Build and deployment → Source → GitHub Actions**), not from a branch. `.github/workflows/deploy.yml` runs on every push to `main` or `develop` (and when a release is published): it runs `scripts/build-site.sh`, which builds every version into one site, and hands that folder to GitHub's official Pages deploy action. No separate server, no Jekyll — the workflow *is* the deploy pipeline. A push to `main` is live at `https://assets.directtrust.org/metadata-and-payloads-guide/` about a minute later. You can watch progress under the repo's **Actions** tab.
 
 The one Pages site serves several versions side by side:
 
@@ -157,7 +157,7 @@ git commit -m "Update SubmissionSet Metadata documentation"
 git push
 ```
 
-That's it — no manual build or deploy step. The GitHub Actions workflow builds the site and publishes it to `https://directtrust.github.io/metadata-and-payloads-guide/` automatically.
+That's it — no manual build or deploy step. The GitHub Actions workflow builds the site and publishes it to `https://assets.directtrust.org/metadata-and-payloads-guide/` automatically.
 
 ## Legacy conversion script
 
@@ -167,4 +167,4 @@ That's it — no manual build or deploy step. The GitHub Actions workflow builds
 
 - Bare angle-bracket placeholders in prose (e.g. `#<contained-id>`) are parsed as HTML tags by Vue and fail the build with "Element is missing end tag". Wrap them in backticks.
 - Word tables with "repeat header row" enabled on *every* row cause pandoc to emit the entire table as `<thead>`/`<th>` with an empty `<tbody>`, which visually renders as one solid blue block (the theme styles `<th>` with the brand color). `scripts/convert-doc.mjs` has a `fixBrokenHeaderTables()` post-processing step that demotes every row after the first back to normal `<td>` — if a newly-converted table shows this symptom, that function (or a similar manual fix) is the place to look.
-- If this repository is ever renamed, `base` in `docs/.vitepress/config.mts` must be updated to match the new repo name (`/<new-name>/`), or the site 404s on all its own assets/images even though the build succeeds — GitHub Pages happily builds and deploys a site with the wrong base path, it just won't render correctly. This is also why the site is *not* at the bare `https://directtrust.github.io/` you might expect: only a repo named exactly `DirectTrust.github.io` gets that root-domain treatment; anything else is a project page served under `/repo-name/`.
+- If this repository is ever renamed, `base` in `docs/.vitepress/config.mts` must be updated to match the new repo name (`/<new-name>/`), or the site 404s on all its own assets/images even though the build succeeds — GitHub Pages happily builds and deploys a site with the wrong base path, it just won't render correctly. This is also why the site is *not* at the bare `https://assets.directtrust.org/` you might expect: only the org's special repo named exactly `DirectTrust.github.io` gets root-domain treatment; anything else is a project page served under `/repo-name/`.
